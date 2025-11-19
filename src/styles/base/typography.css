@@ -17,10 +17,6 @@ a {
   transition: color var(--transition-normal);
 }
 
-a:hover {
-  color: var(--color-secondary);
-}
-
 code {
   background-color: var(--color-gray-100);
   padding: 2px 6px;

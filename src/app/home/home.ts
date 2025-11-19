@@ -10,32 +10,20 @@ import { FooterComponent } from '../footer/footer';
   templateUrl: './home.html',
 })
 export class HomeComponent {
-  insurancePackages = [
-  {
-    icon: '⚡',
-    title: 'Basic Coverage',
-    description: 'Essential protection for your peace of mind at an affordable price.',
+    whatsappNumber = '573148267848';
+  
+    whatsappMessage = 'Hola, me gustaría solicitar una cotización gratuita para mi proyecto de construcción.';
+  
     
-  },
-  {
-    icon: '🏅',
-    title: 'Standard Coverage',
-    description: 'A balanced plan offering enhanced protection and value.',
-    
-  },
-  {
-    icon: '👑',
-    title: 'Premium Coverage',
-    description: 'Comprehensive coverage with exclusive benefits for total security.',
-   
-  },
-  {
-    icon: '🧩',
-    title: 'Custom Coverage',
-    description: 'Build your own plan—choose the features that matter most to you!',
-    
-  }
-];
+    get whatsappLink() {
+      const encodedMessage = encodeURIComponent(this.whatsappMessage);
+      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+    }
+
+    openWhatsApp() {
+      window.open(this.whatsappLink, '_blank');
+    }
+
 
 }
 

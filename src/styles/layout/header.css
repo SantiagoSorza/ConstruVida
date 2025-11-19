@@ -29,10 +29,18 @@
   text-decoration: none;
   transition: var(--transition-normal);
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 
 .header__logo:hover {
   color: var(--color-primary);
+}
+
+.header__logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .header__menu {

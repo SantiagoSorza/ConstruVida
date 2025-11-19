@@ -10,6 +10,7 @@ import { FooterComponent } from '../footer/footer';
   templateUrl: './cotizaciones.html',
 })
 export class Cotizaciones {
+  whatsappLink: string = 'https://wa.me/1234567890';
 
   plans = [
     {
@@ -17,28 +18,26 @@ export class Cotizaciones {
       items: [
         'EPS Y ARL',
         'Aplica para:',
-        'Mujeres mayores de 57 años y hombres mayores de 62 años.',
-        'Extranjeros no obligados a cotizar pensión en Colombia'
+        '✅ Mujeres mayores de 57 años y hombres mayores de 62 años.',
+        '✅ Extranjeros no obligados a cotizar pensión en Colombia'
       ]
     },
     {
       title: 'Plan 2',
       items: [
-        'SALUD, PENSION Y ARL ',
+        'SALUD, PENSION, ARL, CAJA DE COMPENSACION FAMILIAR Y SESANTIAS',
         'Aplica para: ',
-        'Independientes,  contratistas y voluntarios.(OPS)',
-        'Nivel 1,2,3,4 y 5'
+        '✅ Empleados y empresas'
       ]
     },
     {
       title: 'Plan 3',
       items: [
-        'SALUD, PENSION, ARL, CAJA DE COMPENSACION FAMILIAR Y SESANTIAS',
+        'SALUD, PENSION Y ARL ',
         'Aplica para: ',
-        'Empleados y empresas'
+        '✅ Independientes,  contratistas y voluntarios.(OPS)',
+        '✅ Nivel 1,2,3,4 y 5'
       ]
     }
   ];
-
-
 }

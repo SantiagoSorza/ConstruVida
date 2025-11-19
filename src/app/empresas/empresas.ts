@@ -10,6 +10,19 @@ import { FooterComponent } from '../footer/footer';
   templateUrl: './empresas.html',
 })
 export class Empresas {
+    whatsappNumber = '573148267848';
+  
+    whatsappMessage = 'Hola, me gustaría solicitar una cotización gratuita para mi proyecto de construcción.';
+  
+    
+    get whatsappLink() {
+      const encodedMessage = encodeURIComponent(this.whatsappMessage);
+      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+    }
+
+    openWhatsApp() {
+      window.open(this.whatsappLink, '_blank');
+    }
   companies = [
     { id: 1, name: 'Construcciones del Norte S.A.S', specialty: 'Construcción Residencial',
       description: 'Empresa líder en proyectos residenciales de alta gama. Más de 25 años de experiencia en el sector.' },

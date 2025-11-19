@@ -9,27 +9,27 @@
   </div>
 
   <div class="hero__content hero__content--left">
-    <h1 class="hero__title">Lorem ipsum dolor sit amet, conts</h1>
+    <h1 class="hero__title">Soluciones de Protección y Bienestar para Todos</h1>
 
     <div class="hero__actions">
-      <button class="btn btn--plan">SOLICITAR COTIZACIÓN</button>
-      <button class="btn btn--plan">VER PLANES DISPONIBLES</button>
+      <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">SOLICITAR COTIZACIÓN</a>
+      <button class="btn btn--primary hero__cta">VER PLANES DISPONIBLES</button>
     </div>
   </div>
 </section>
 
 
-  <section class="cotizaciones-section">
-    <h2 class="cotizaciones-section__title">PLANES PARA TODOS</h2>
-    <p class="cotizaciones-section__subtitle">Consulta nuestros planes</p>
+  <section class="section">
+    <h2 class="section-title">PLANES PARA TODOS</h2>
+    <p class="section-subtitle">Consulta nuestros planes</p>
 
-    <div class="cotizaciones-section__grid">
+    <div class="grid grid--auto">
       <article class="plan-card" *ngFor="let plan of plans">
         <h3 class="plan-card__title">{{plan.title}}</h3>
         <ul class="plan-card__list">
           <li class="plan-card__list-item" *ngFor="let item of plan.items">{{item}}</li>
         </ul>
-        <button class="btn btn--plan plan-card__cta">Me interesa</button>
+        <button class="btn btn--primary hero__cta">Me interesa</button>
       </article>
     </div>
   </section>

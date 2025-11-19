@@ -18,16 +18,10 @@
 
 @import url('./modules/buttons.css');
 @import url('./modules/cards.css');
-@import url('./modules/forms.css');
 @import url('./modules/hero.css');
 @import url('./modules/pagination.css');
 @import url('./modules/banners.css');
-@import url('./modules/home.css');
-@import url('./modules/empresas.css');
-@import url('./modules/independientes.css');
-@import url('./modules/cotizaciones.css');
-@import url('./modules/contact.css');
-@import url('./modules/nosotros.css');
-
+@import url('./modules/requirements.css');
+@import url('./modules/feature.css');
 
 @import url('./state/states.css');

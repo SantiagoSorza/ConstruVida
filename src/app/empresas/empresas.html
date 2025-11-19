@@ -1,5 +1,4 @@
-
- <app-header></app-header>
+<app-header></app-header>
 
 <main role="main">
 
@@ -13,16 +12,16 @@
       <h1 class="hero__title">
         Optimiza tu tiempo: gestionamos EPS, ARL y pensiones por tu empresa
       </h1>
-      <button class="btn btn--primary">MÁS INFORMACIÓN</button>
+      <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">MÁS INFORMACIÓN</a>
     </div>
   </section>
 
 
-  <section class="empresas-about" role="region" aria-labelledby="section-title-1">
-    <div class="empresas-about__img">
+  <section class="section_about" role="region" aria-labelledby="section-title-1">
+    <div class="section_about__img">
       <img src="https://www.funcionpublica.gov.co/eva/admon/files/empresas/ZW1wcmVzYV83Ng==/imagenes/a7b363a8024d15b10945580129ff0e7e07e6692f.jpg"  alt="Imagen representativa">
     </div>
-    <div class="empresas-about__text">
+    <div class="section_about__text">
       <h2 id="section-title-1">Mas tiempo para lo que importa</h2>
       <p>
         Ajustar estrategias como nuestros esfuerzos nos lleva por caminos más
@@ -45,40 +44,47 @@
     </div>
 
 </section>
-<section class="empresas-services">
-  <h2 class="empresas-services__title">SERVICIOS PRINCIPALES</h2>
-  <p class="empresas-services__subtitle">Soluciones claras para tu empresa</p>
+<section class="cards-services">
+  <h2 class="cards-services__title">SERVICIOS PRINCIPALES</h2>
+  <p class="cards-services__subtitle">Soluciones claras para tu empresa</p>
 
-  <div class="empresas-services__grid">
+  <div class="cards-services__grid">
 
-    <div class="empresas-services__card">
-      <div class="empresas-services__icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/3500/3500833.png" alt="icon">
+    <div class="cards-services__card">
+      <div class="cards-services__icon">
+        <img src="assets/img/apreton-de-manos.png" alt="icon">
       </div>
-      <h3 class="empresas-services__card-title">ASESORIA GRATUITA</h3>
-      <p class="empresas-services__card-text">Gestión rápida y sin complicaciones para tu equipo</p>
+      <h3 class="cards-services__card-title">ASESORIA GRATUITA</h3>
+      <div class="cards-services__text-wrapper">
+      <p class="cards-services__card-text">Gestión rápida y sin complicaciones para tu equipo</p>
+      </div>
     </div>
 
-    <div class="empresas-services__card">
-      <div class="empresas-services__icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="icon">
+    <div class="cards-services__card">
+      <div class="cards-services__icon">
+        <img src="assets/img/silueta-de-multiples-usuarios.png" alt="icon">
       </div>
-      <h3 class="empresas-services__card-title">ACOMPAÑAMIENTO EN SEGURIDAD SOCIAL</h3>
-      <p class="empresas-services__card-text">Soporte continuo para garantizar cumplimiento y orden</p>
+      <h3 class="cards-services__card-title">ACOMPAÑAMIENTO EN SEGURIDAD SOCIAL</h3>
+      <div class="cards-services__text-wrapper">
+        <p class="cards-services__card-text">Soporte continuo para garantizar cumplimiento y orden</p>
+      </div>
+      
     </div>
 
-    <div class="empresas-services__card">
-      <div class="empresas-services__icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="icon">
+    <div class="cards-services__card">
+      <div class="cards-services__icon">
+        <img src="assets/img/empresario.png" alt="icon">
       </div>
-      <h3 class="empresas-services__card-title">SERVICIO DE OUTSORSING</h3>
-      <p class="empresas-services__card-text">Nos encargamos de todos los trámites y actualizaciones</p>
+      <h3 class="cards-services__card-title">SERVICIO DE OUTSORSING</h3>
+      <div class="cards-services__text-wrapper">
+        <p class="cards-services__card-text">Nos encargamos de todos los trámites y actualizaciones</p>
+      </div>
     </div>
 
   </div>
 
-  <div class="empresas-services__cta">
-    <button class="btn btn--primary empresas-services__cta">Consultar</button>
+  <div class="cards-services__cta">
+    <button class="btn btn--primary cards-services__cta">Consultar</button>
   </div>
 </section>
 

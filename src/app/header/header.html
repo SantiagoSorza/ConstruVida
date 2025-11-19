@@ -7,21 +7,11 @@
         aria-label="Construction Life - Volver al inicio"
         (click)="closeMenu()"
       >
-        Construction Life
+        <img src="assets/img/logo.png" alt="Logo ConstruVida" class="header__logo-img">
       </a>
 
       <ul class="header__menu" [class.is-open]="isMenuOpen" id="nav-menu">
-        <li class="header__menu-item">
-          <a 
-            routerLink="/" 
-            routerLinkActive="is-active" 
-            [routerLinkActiveOptions]="{exact: true}"
-            aria-current="page"
-            (click)="closeMenu()"
-          >
-            Inicio
-          </a>
-        </li>
+  
         <li class="header__menu-item">
           <a 
             routerLink="/independientes" 

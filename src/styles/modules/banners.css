@@ -1,9 +1,6 @@
-
 .curved-section {
   position: relative;
-  padding: 0;
   overflow: hidden;
-  margin: var(--space-6) 0;
 }
 
 .curved__content {
@@ -15,10 +12,10 @@
 
 .curved__img {
   width: 100%;
-  height: 600px;
+  height: 500px;
   object-fit: cover;
   display: block;
-  object-position: 0% 50%;
+  object-position: 0% 60%;
 }
 
 
@@ -36,6 +33,14 @@
   display: block;
   object-position: 0% 65%;
 }
+
+.curved__imgNos {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  display: block;
+  object-position: 0% 60%;
+}
 .curved__overlay {
   position: absolute;
   inset: 0;
@@ -45,10 +50,23 @@
 
 .curved__cta {
   position: absolute;
-  bottom: var(--space-5);
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
+  transform: translate(-50%, -50%);
+  z-index: 4; 
+  padding: 16px 48px;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  border-radius: calc(var(--radius-lg) + 4px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.14);
+  background: var(--color-primary);
+  color: var(--text-light);
+  border: 2px solid rgba(0,0,0,0.06);
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
 }
 
 .curved__text {
@@ -64,47 +82,15 @@
   pointer-events: none;
 }
 
-.curved__text h1,
-.curved__text h2,
-.curved__text p {
-  margin: 0;
-  color: inherit;
-  text-shadow: 0 6px 18px rgba(0,0,0,0.55);
-}
+@media (max-width: 480px) {
+  .banner {
+    padding: var(--space-3);
+    text-align: center;
+  }
 
-.curved__text h1 {
-  font-size: 4rem;
-}
-
-.curved__text h2 {
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
-}
-
-.curved__text p {
-  font-size: clamp(1rem, 2.2vw, 1.125rem);
-}
-
-.curved-section--lg {
-  --curved-height: 600px;
+  .banner__title {
+    font-size: var(--font-size-lg);
+  }
 }
 
 
-
-.curved__content--left .curved__cta {
-  left: var(--space-5);
-  transform: none;
-}
-
-.curved__content--right .curved__cta {
-  right: var(--space-5);
-  left: auto;
-  transform: none;
-}
-
-.curved-section--dark .curved__overlay {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.curved-section--light .curved__overlay {
-  background: rgba(255, 255, 255, 0.1);
-}

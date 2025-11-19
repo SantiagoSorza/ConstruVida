@@ -10,6 +10,19 @@ import { FooterComponent } from '../footer/footer';
   templateUrl: './independientes.html',
 })
 export class Independientes {
+     whatsappNumber = '573148267848';
+  
+    whatsappMessage = 'Hola, me gustaría solicitar una cotización gratuita para mi proyecto de construcción.';
+  
+    
+    get whatsappLink() {
+      const encodedMessage = encodeURIComponent(this.whatsappMessage);
+      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+    }
+
+    openWhatsApp() {
+      window.open(this.whatsappLink, '_blank');
+    }
 
   epsList = [
     { image: "assets/img/eps/nueva_eps.png",
@@ -77,50 +90,56 @@ export class Independientes {
 
 
   pensionesList = [
-    { title: 'Protección', image: 'assets/pensiones/proteccion.png' },
-    { title: 'Porvenir', image: 'assets/pensiones/porvenir.png' },
-    { title: 'Colpensiones', image: 'assets/pensiones/colpensiones.png' }
+    { title: 'Protección', image: 'assets/img/pensiones/proteccion.jpg' },
+    { title: 'Porvenir', image: 'assets/img/pensiones/porvenir.webp' },
+    { title: 'Colpensiones', image: 'assets/img/pensiones/colpensiones.webp' },
+    { title: 'Oldmutual', image: 'assets/img/pensiones/oldmutual.png' },
+    { title: 'Colfondos', image: 'assets/img/pensiones/colfondos.png' }
   ];
 
   currentPageP = 1;
   itemsPerPageP = 3;
 
   get paginatedCardsP() {
-    const start = (this.currentPage - 1) * this.itemsPerPage;
-    const end = start + this.itemsPerPage;
+    const start = (this.currentPageP - 1) * this. itemsPerPageP;
+    const end = start + this.itemsPerPageP;
     return this.pensionesList.slice(start, end);
   }
 
   nextPageP() {
-    if (this.currentPage * this.itemsPerPage < this.pensionesList.length) {
-      this.currentPage++;
+    if (this.currentPageP * this.itemsPerPageP < this.pensionesList.length) {
+      this.currentPageP++;
     }
   }
 
   prevPageP() {
-    if (this.currentPage > 1) {
-      this.currentPage--;
+    if (this.currentPageP > 1) {
+      this.currentPageP--;
     }
   }
 
-  goToPageP(page: number) {
-    this.currentPage = page;
+  goToPageP(pageP: number) {
+    this.currentPageP = pageP;
   }
 
   get totalPagesP() {
-    return Math.ceil(this.pensionesList.length / this.itemsPerPage);
+    return Math.ceil(this.pensionesList.length / this.itemsPerPageP);
   }
 
   get pagesP() {
-    return Array.from({length: this.totalPages}, (_, i) => i + 1);
+    return Array.from({length: this.totalPagesP}, (_, i) => i + 1);
   }
 
 
   requisitos = [
-    'Cédula de ciudadanía o extranjería.',
-    'No estar registrado como beneficiario en otra EPS.',
-    'Tener un ingreso declarado para cotizar.',
-    'Registrarse como independiente en la plataforma.'
+    'Definir qué tipo de afiliación necesita la persona: dependiente, independiente o independiente por OPS.',
+    'Cédula del cotizante (obligatoria en todos los casos).',
+    'Para inclusión de beneficiarios: Cónyuge, anexar la cédula del cónyuge.',
+    'Hijos de 0 a 7 años: registro civil.',
+    'Hijos de 7 a 18 años: tarjeta de identidad y registro civil.',
+    'Mayores de 18 años: cédula del beneficiario y registro civil.',
+    'En todos los casos donde se incluyan beneficiarios, también debe adjuntarse la cédula del cotizante.',
+    'Si la persona es independiente por OPS y requiere afiliación a la ARL, debe anexar el contrato por prestación de servicios.'
   ];
 
 }
