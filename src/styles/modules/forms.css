@@ -1,0 +1,90 @@
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-1);
+  color: var(--text-dark);
+}
+
+.form__input,
+.form__textarea,
+.form__select {
+  padding: 12px 15px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-300);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  transition: var(--transition-normal);
+}
+
+.form__input:focus,
+.form__textarea:focus,
+.form__select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Form Variants */
+.form--blue .form__input,
+.form--blue .form__textarea,
+.form--blue .form__select {
+  border-color: #004a77;
+}
+
+.form--blue .form__input:focus,
+.form--blue .form__textarea:focus,
+.form--blue .form__select:focus {
+  border-color: #004a77;
+  box-shadow: 0 0 0 3px rgba(0, 74, 119, 0.1);
+}
+
+.form--blue .form__label {
+  color: #004a77;
+}
+
+/* Form States */
+.form__input:disabled,
+.form__textarea:disabled,
+.form__select:disabled {
+  background-color: var(--color-gray-100);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form__input--error,
+.form__textarea--error {
+  border-color: var(--color-error);
+}
+
+.form__input--error:focus,
+.form__textarea--error:focus {
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.form__error-message {
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-1);
+}
+
+.form__success-message {
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-1);
+}

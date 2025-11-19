@@ -1,0 +1,138 @@
+
+.features-section {
+  padding: var(--space-6) var(--space-4);
+  background: #f9f9f9;
+}
+
+.features-section {
+  padding: var(--space-6) var(--space-4);
+  background: #f9f9f9;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.features__card {
+  background: white;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.features__card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: #003d77;
+  margin-bottom: var(--space-3);
+}
+
+.features__card-text {
+  color: var(--text-dark);
+  line-height: 1.8;
+  font-size: var(--font-size-base);
+}
+
+.features__images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.feature-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.feature-card__cta {
+  position: absolute;
+  bottom: var(--space-3);
+  right: var(--space-3);
+  z-index: 2;
+}
+
+.btn--yellow {
+  background: var(--color-accent);
+  color: #111;
+  font-weight: var(--font-weight-bold);
+}
+
+.btn--yellow:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.insurance-section {
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+  background: white;
+}
+
+.insurance__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: #003d77;
+  margin-bottom: var(--space-2);
+}
+
+.insurance__subtitle {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-5);
+  color: var(--text-dark);
+}
+
+.insurance__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.insurance-card {
+  background: white;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.insurance-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.insurance-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-2);
+}
+
+.insurance-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.insurance-card__description {
+  color: var(--text-dark);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}

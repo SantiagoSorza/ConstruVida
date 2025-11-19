@@ -1,0 +1,87 @@
+<header role="banner" class="header">
+  <nav class="header__nav" role="navigation" aria-label="Navegación principal">
+    <div class="header__container">
+      <a 
+        routerLink="/" 
+        class="header__logo" 
+        aria-label="Construction Life - Volver al inicio"
+        (click)="closeMenu()"
+      >
+        Construction Life
+      </a>
+
+      <ul class="header__menu" [class.is-open]="isMenuOpen" id="nav-menu">
+        <li class="header__menu-item">
+          <a 
+            routerLink="/" 
+            routerLinkActive="is-active" 
+            [routerLinkActiveOptions]="{exact: true}"
+            aria-current="page"
+            (click)="closeMenu()"
+          >
+            Inicio
+          </a>
+        </li>
+        <li class="header__menu-item">
+          <a 
+            routerLink="/independientes" 
+            routerLinkActive="is-active"
+            (click)="closeMenu()"
+          >
+            Independientes
+          </a>
+        </li>
+        <li class="header__menu-item">
+          <a 
+            routerLink="/empresas" 
+            routerLinkActive="is-active"
+            (click)="closeMenu()"
+          >
+            Empresas
+          </a>
+        </li>
+        <li class="header__menu-item">
+          <a 
+            routerLink="/cotizaciones" 
+            routerLinkActive="is-active"
+            (click)="closeMenu()"
+          >
+            Cotizaciones
+          </a>
+        </li>
+
+         <li class="header__menu-item">
+          <a 
+            routerLink="/nosotros" 
+            routerLinkActive="is-active"
+            (click)="closeMenu()"
+          >
+            Nosotros
+          </a>
+        </li>
+        <li class="header__menu-item">
+          <a 
+            routerLink="/contactenos" 
+            routerLinkActive="is-active"
+            (click)="closeMenu()"
+          >
+            Contactenos
+          </a>
+        </li>
+      </ul>
+
+      <button 
+        class="header__hamburger" 
+        [class.is-active]="isMenuOpen"
+        (click)="toggleMenu()"
+        aria-label="Menú principal"
+        aria-expanded="{{isMenuOpen}}"
+        aria-controls="nav-menu"
+      >
+        <span class="header__hamburger-bar"></span>
+        <span class="header__hamburger-bar"></span>
+        <span class="header__hamburger-bar"></span>
+      </button>
+    </div>
+  </nav>
+</header>

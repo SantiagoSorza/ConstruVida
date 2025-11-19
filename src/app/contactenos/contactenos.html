@@ -1,0 +1,42 @@
+<app-header></app-header>
+<main class="contact-page">
+
+  <section class="hero hero--center">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80" alt="Contacto" class="hero__imgCont" />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content hero__content--center">
+      <h1 class="hero__title">Contáctanos</h1>
+      <h1 class="hero__subtitle">Nos ocupamos de tus trámites ante EPS, ARL, pensiones y demás entidades. Escríbenos y te orientamos.</h1>
+    </div>
+  </section>
+
+  <section class="contact-form-section">
+    <div class="contact-form-section">
+      <div class="quote-card" role="region" aria-labelledby="quote-title">
+        <h3 id="quote-title">Solicita tu cotización gratuita</h3>
+
+        <div class="quote-card__image-container">
+          <img src="../../../public/assets/img/pngwing.com.png" alt="WhatsApp contacto" class="quote-card__image">
+        </div>
+
+        <p class="quote-text">Contáctanos directamente por WhatsApp y recibe atención personalizada de inmediato. Déjanos tu nombre y tu consulta.</p>
+
+        <a
+          [href]="whatsappLink"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="quote-submit"
+          aria-label="Chatear por WhatsApp para solicitar cotización"
+        >
+          Enviar y chatear por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+     
+</main>
+
+<app-footer></app-footer>

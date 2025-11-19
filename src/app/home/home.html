@@ -1,0 +1,94 @@
+<app-header></app-header>
+
+<main role="main">
+  
+<section class="hero hero--left">
+
+  <div class="hero__bg">
+    <img src="https://img.freepik.com/foto-gratis/tres-trabajadores-fabrica-sombreros-seguridad-discutiendo-plan-fabricacion_1303-30650.jpg?semt=ais_hybrid&w=740&q=80" alt="Banner" class="hero__img">
+    <div class="hero__overlay"></div>
+  </div>
+
+  <div class="hero__content hero__content--left">
+    <h1 class="hero__title">
+      "Nos encargamos de tus trámites ante EPS, ARL, pensiones y demás entidades de la Seguridad Social."
+    </h1>
+
+    <button class="btn btn--primary hero__cta">Quiero recibir más información</button>
+  </div>
+
+</section>
+
+<section class="features-section">
+  <div class="container">
+    <div class="features__grid">
+      
+      <div class="features__card">
+        <h2 class="features__card-title">Encuentra el servicio ideal para ti</h2>
+        <p class="features__card-text">
+          Tanto independientes como empresas cuentan con nuestro apoyo para gestionar afiliaciones, 
+          novedades y trámites ante la Seguridad Social de forma rápida, segura y sin complicaciones. 
+          Selecciona tu perfil y comienza ahora.
+        </p>
+      </div>
+
+      <div class="features__images">
+        
+        <div class="feature-card">
+          <img src="https://www.valoraanalitik.com/wp-content/uploads/2021/01/trabajador-independiente-1200x750-1.jpg" alt="Independiente" class="feature-card__img">
+          <button class="btn btn--yellow feature-card__cta">Independiente</button>
+        </div>
+
+        <div class="feature-card">
+          <img src="https://www.sesamehr.co/wp-content/uploads/2022/01/base-datos-trabajadores-empresa.webp" alt="Empresa" class="feature-card__img">
+          <button class="btn btn--yellow feature-card__cta">Empresa</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="curved-section">
+  <div class="curved__content">
+  <img src="https://static.vecteezy.com/system/resources/previews/008/740/772/large_2x/team-of-business-people-working-together-in-the-meeting-room-office-teamwork-background-charts-and-graphs-banner-double-exposure-successful-teamwork-business-planning-concept-free-photo.jpg" alt="Asistencia en línea" class="curved__imgInde">
+  <div class="curved__overlay"></div>
+  <button class="btn btn--secondary curved__cta">
+    Asistencia en Línea
+  </button>
+    </div>
+
+</section>
+
+
+<section class="insurance-section" role="region" aria-labelledby="insurance-title">
+  <h2 id="insurance-title" class="insurance__title">Our Insurance Package</h2>
+  <p class="insurance__subtitle">
+    Tailored plans to meet your needs—pick the one that suits you!
+  </p>
+
+  <div class="insurance__grid">
+    <article
+      *ngFor="let pkg of insurancePackages; let i = index"
+      class="insurance-card"
+      role="article"
+      [attr.aria-labelledby]="'pkg-' + i"
+    >
+      <div class="insurance-card__icon">{{ pkg.icon }}</div>
+
+      <h3 [id]="'pkg-' + i" class="insurance-card__title">
+        {{ pkg.title }}
+      </h3>
+
+      <p class="insurance-card__description">
+        {{ pkg.description }}
+      </p>
+
+    </article>
+  </div>
+</section>
+</main>
+
+<app-footer></app-footer>

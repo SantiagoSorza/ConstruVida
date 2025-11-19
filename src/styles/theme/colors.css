@@ -1,0 +1,35 @@
+
+
+:root {
+  /* Brand Colors */
+  --color-primary: #3498db;
+  --color-secondary: #e5c700;
+  --color-accent: #eeff00;
+
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e4e4e4;
+  --color-gray-300: #cfcfcf;
+  --color-gray-400: #95a5a6;
+  --color-gray-500: #7f8c8d;
+
+  /* Text Colors */
+  --text-dark: #2c3e50;
+  --text-light: #f2f2f2;
+
+  /* Section Colors */
+  --color-section-green: #00301c;
+  --color-section-blue: #0f3a4a;
+
+  /* Semantic Colors */
+  --color-success: #27ae60;
+  --color-warning: #f39c12;
+  --color-error: #e74c3c;
+  --color-info: #3498db;
+
+  /* Background Colors */
+  --bg-light: #ffffff;
+  --bg-dark: #1a1a1a;
+}

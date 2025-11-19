@@ -1,0 +1,163 @@
+<app-header></app-header>
+
+<main role="main">
+<div class="page-container">
+
+
+  <section class="hero hero--left">
+    <div class="hero__bg">
+      <img src="https://img.freepik.com/foto-gratis/hombre-atractivo-hipster-usando-dispositivos-trabajando-computadora-portatil-tableta_285396-1630.jpg?semt=ais_hybrid&w=740&q=80" alt="Banner" class="hero__img">
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content hero__content--left">
+      <h1 class="hero__title">Motivos o ventajas de afiliarse como independiente</h1>
+      <button class="btn btn--primary hero__cta">
+        Quiero recibir más información
+      </button>
+      </div>
+  </section>
+
+    <section class="section">
+        <h2 class="section-title">EPS DISPONIBLES</h2>
+        <p class="section-subtitle">Aquí puedes ver la lista de EPS habilitadas.</p>
+
+    <div class="grid grid--auto">
+      <article *ngFor="let item of paginatedCards; let i = index" class="card" role="article" [attr.aria-labelledby]="'card-' + i">
+        <div class="card__image">
+          <img [src]="item.image" [alt]="'Imagen del proyecto: ' + item.title" class="card__img">
+        </div>
+        <div class="card__content">
+          <h3 [id]="'card-' + i" class="card__title">
+            <a href="/proyecto" [attr.aria-label]="'Ver detalles del proyecto: ' + item.title">
+              {{item.title}}
+            </a>
+          </h3>
+        </div>
+      </article>
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="Paginación de proyectos">
+      <button 
+        class="pagination__btn pagination__btn--prev" 
+        (click)="prevPage()" 
+        [disabled]="currentPage === 1"
+        aria-label="Página anterior"
+      >
+        ‹
+      </button>
+      
+      <div class="pagination__dots">
+        <button 
+          *ngFor="let page of pages" 
+          class="pagination__btn" 
+          [class.is-active]="page === currentPage"
+          (click)="goToPage(page)"
+          [attr.aria-label]="'Ir a página ' + page"
+          [attr.aria-current]="page === currentPage ? 'page' : null"
+        >
+          {{page}}
+        </button>
+      </div>
+      
+      <button 
+        class="pagination__btn pagination__btn--next" 
+        (click)="nextPage()" 
+        [disabled]="currentPage === totalPages"
+        aria-label="Página siguiente"
+      >
+        ›
+      </button>
+    </nav>
+    </section>
+    <section class="curved-section">
+      <div class="curved__content">
+      <img src="https://forbeslongevitycenter.com/wp-content/uploads/2025/11/Omniwave1-1024x633.jpg" alt="Asistencia en línea" class="curved__imgInde">
+      <div class="curved__overlay"></div>
+        </div>
+    </section>
+
+    <section class="section section--gray">
+      <div>
+        <h2 class="section-title">Pensiones disponibles</h2>
+
+        <div class="grid grid--auto">
+      <article *ngFor="let item of paginatedCardsP; let i = index" class="card" role="article" [attr.aria-labelledby]="'card-' + i">
+        <div class="card__image">
+          <img [src]="item.image" [alt]="'Imagen del proyecto: ' + item.title" class="card__img">
+          <span class="card__badge" aria-hidden="true">Nuevo</span>
+        </div>
+        <div class="card__content">
+          <h3 [id]="'card-' + i" class="card__title">
+            <a href="/proyecto" [attr.aria-label]="'Ver detalles del proyecto: ' + item.title">
+              {{item.title}}
+            </a>
+          </h3>
+        </div>
+      </article>
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="Paginación de proyectos">
+      <button 
+        class="pagination__btn pagination__btn--prev" 
+        (click)="prevPage()" 
+        [disabled]="currentPage === 1"
+        aria-label="Página anterior"
+      >
+        ‹
+      </button>
+      
+      <div class="pagination__dots">
+        <button 
+          *ngFor="let page of pages" 
+          class="pagination__btn" 
+          [class.is-active]="page === currentPage"
+          (click)="goToPage(page)"
+          [attr.aria-label]="'Ir a página ' + page"
+          [attr.aria-current]="page === currentPage ? 'page' : null"
+        >
+          {{page}}
+        </button>
+      </div>
+      
+      <button 
+        class="pagination__btn pagination__btn--next" 
+        (click)="nextPage()" 
+        [disabled]="currentPage === totalPages"
+        aria-label="Página siguiente"
+      >
+        ›
+      </button>
+    </nav>
+      </div>
+        
+    </section>
+
+
+  <section class="section section--empty">
+
+  <h2 class="section-title">¿LOREM IPSUM DOLOR?</h2>
+  <p class="section-subtitle">Lorem ipsum dolor sit</p>
+
+  <button class="btn btn--secondary">Ver mas</button>
+
+  <hr class="divider">
+
+</section>
+
+
+    <section class="section">
+        <h2 class="section-title">Requisitos para la afiliación</h2>
+
+        <ul class="list list--requirements">
+            <li *ngFor="let req of requisitos">{{ req }}</li>
+        </ul>
+
+        <div class="button-group">
+            <button class="btn btn--primary" routerLink="/cotizaciones">¿Quieres cotizar?</button>
+        </div>
+    </section>
+</div>
+</main>
+
+<app-footer></app-footer>

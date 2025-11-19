@@ -1,0 +1,110 @@
+
+.curved-section {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  margin: var(--space-6) 0;
+}
+
+.curved__content {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+
+.curved__img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  object-position: 0% 50%;
+}
+
+
+.curved__imgInde {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+  object-position: 0% 10%;
+}
+.curved__imgEmp {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+  object-position: 0% 65%;
+}
+.curved__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.curved__cta {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.curved__text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+  padding: var(--space-4);
+  pointer-events: none;
+}
+
+.curved__text h1,
+.curved__text h2,
+.curved__text p {
+  margin: 0;
+  color: inherit;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.55);
+}
+
+.curved__text h1 {
+  font-size: 4rem;
+}
+
+.curved__text h2 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.curved__text p {
+  font-size: clamp(1rem, 2.2vw, 1.125rem);
+}
+
+.curved-section--lg {
+  --curved-height: 600px;
+}
+
+
+
+.curved__content--left .curved__cta {
+  left: var(--space-5);
+  transform: none;
+}
+
+.curved__content--right .curved__cta {
+  right: var(--space-5);
+  left: auto;
+  transform: none;
+}
+
+.curved-section--dark .curved__overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.curved-section--light .curved__overlay {
+  background: rgba(255, 255, 255, 0.1);
+}

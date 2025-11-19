@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<main role="main">
+
+ <section class="hero hero--left">
+  <div class="hero__bg">
+    <img src="https://i.pinimg.com/1200x/8f/29/e5/8f29e5f0bb9b0796bdd49fd99a19a2ec.jpg" alt="Banner" class="hero__img">
+    <div class="hero__overlay"></div>
+  </div>
+
+  <div class="hero__content hero__content--left">
+    <h1 class="hero__title">Lorem ipsum dolor sit amet, conts</h1>
+
+    <div class="hero__actions">
+      <button class="btn btn--plan">SOLICITAR COTIZACIÓN</button>
+      <button class="btn btn--plan">VER PLANES DISPONIBLES</button>
+    </div>
+  </div>
+</section>
+
+
+  <section class="cotizaciones-section">
+    <h2 class="cotizaciones-section__title">PLANES PARA TODOS</h2>
+    <p class="cotizaciones-section__subtitle">Consulta nuestros planes</p>
+
+    <div class="cotizaciones-section__grid">
+      <article class="plan-card" *ngFor="let plan of plans">
+        <h3 class="plan-card__title">{{plan.title}}</h3>
+        <ul class="plan-card__list">
+          <li class="plan-card__list-item" *ngFor="let item of plan.items">{{item}}</li>
+        </ul>
+        <button class="btn btn--plan plan-card__cta">Me interesa</button>
+      </article>
+    </div>
+  </section>
+
+
+</main>
+
+<app-footer></app-footer>

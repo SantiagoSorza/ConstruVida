@@ -1,0 +1,27 @@
+@import 'styles/base/reset.css';
+@import 'styles/base/typography.css';
+@import 'styles/base/utilities.css';
+
+@import 'styles/theme/colors.css';
+@import 'styles/theme/spacing.css';
+@import 'styles/theme/fonts.css';
+
+@import 'styles/layout/header.css';
+@import 'styles/layout/footer.css';
+@import 'styles/layout/grid.css';
+@import 'styles/layout/sections.css';
+
+@import 'styles/modules/hero.css';
+@import 'styles/modules/cards.css';
+@import 'styles/modules/pagination.css';
+@import 'styles/modules/buttons.css';
+@import 'styles/modules/forms.css';
+@import 'styles/modules/contact.css';
+@import 'styles/modules/empresas.css';
+@import 'styles/modules/cotizaciones.css';
+@import 'styles/modules/home.css';
+@import 'styles/modules/independientes.css';
+@import 'styles/modules/nosotros.css';
+@import 'styles/modules/banners.css';
+
+@import 'styles/state/states.css';
