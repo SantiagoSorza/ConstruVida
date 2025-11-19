@@ -10,7 +10,19 @@ import { FooterComponent } from '../footer/footer';
   templateUrl: './cotizaciones.html',
 })
 export class Cotizaciones {
-  whatsappLink: string = 'https://wa.me/1234567890';
+    whatsappNumber = '573148267848';
+  
+    whatsappMessage = 'Hola, me gustaría solicitar una cotización gratuita para mi proyecto de construcción.';
+  
+    
+    get whatsappLink() {
+      const encodedMessage = encodeURIComponent(this.whatsappMessage);
+      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+    }
+
+    openWhatsApp() {
+      window.open(this.whatsappLink, '_blank');
+    }
 
   plans = [
     {

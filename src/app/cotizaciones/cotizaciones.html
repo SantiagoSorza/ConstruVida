@@ -13,7 +13,7 @@
 
     <div class="hero__actions">
       <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">SOLICITAR COTIZACIÓN</a>
-      <button class="btn btn--primary hero__cta">VER PLANES DISPONIBLES</button>
+      <a class="btn btn--primary hero__cta">VER PLANES DISPONIBLES</a>
     </div>
   </div>
 </section>
@@ -29,7 +29,7 @@
         <ul class="plan-card__list">
           <li class="plan-card__list-item" *ngFor="let item of plan.items">{{item}}</li>
         </ul>
-        <button class="btn btn--primary hero__cta">Me interesa</button>
+        <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">Me interesa</a>
       </article>
     </div>
   </section>
