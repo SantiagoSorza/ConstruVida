@@ -27,7 +27,7 @@
         </div>
         <div class="card__content">
           <h3 [id]="'card-' + i" class="card__title">
-            <a href="/proyecto" [attr.aria-label]="'Ver detalles del proyecto: ' + item.title">
+            <a [attr.aria-label]="'Ver detalles del proyecto: ' + item.title">
               {{item.title}}
             </a>
           </h3>
@@ -70,7 +70,7 @@
     </section>
     <section class="curved-section">
       <div class="curved__content">
-      <img src="https://forbeslongevitycenter.com/wp-content/uploads/2025/11/Omniwave1-1024x633.jpg" alt="Asistencia en línea" class="curved__imgInde">
+      <img src="https://www.iadb.org/sites/default/files/styles/landscape_2x1_768000_768x384_100/public/2023-10/Retirees-Banner-IDB-Social-development.jpg?h=fd3efce3&itok=ELuAWQXX " alt="Asistencia en línea" class="curved__imgInde">
       <div class="curved__overlay"></div>
         </div>
     </section>
@@ -85,7 +85,8 @@
         </div>
         <div class="card__content">
           <h3 [id]="'card-' + i" class="card__title">
-            <a href="/proyecto" [attr.aria-label]="'Ver detalles del proyecto: ' + item.title">
+            <a 
+             [attr.aria-label]="'Ver detalles del proyecto: ' + item.title">
               {{item.title}}
             </a>
           </h3>

@@ -48,14 +48,7 @@
   align-items: flex-start;
 }
 
-.footer__item-icon {
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--text-light);
-  border-radius: 3px;
-  flex-shrink: 0;
-  margin-top: 3px;
-}
+
 
 .footer__item-content {
   flex: 1;
