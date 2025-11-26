@@ -12,7 +12,6 @@
   box-shadow: 0 6px 18px rgba(30, 132, 73, 0.12);
 }
 
-/* Button Variants - keep visually consistent as green */
 .btn--primary,
 .btn--secondary,
 .btn--accent,
@@ -29,7 +28,6 @@
   box-shadow: none;
 }
 
-/* Button Sizes */
 .btn--sm {
   padding: 8px 16px;
   font-size: var(--font-size-sm);
@@ -40,20 +38,17 @@
   font-size: var(--font-size-lg);
 }
 
-/* Button Full Width */
 .btn--block {
   display: block;
   width: 100%;
 }
 
-/* Disabled state */
 .btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
   filter: grayscale(40%);
 }
 
-/* Interaction states */
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(30, 132, 73, 0.18);
@@ -74,18 +69,23 @@
   outline-offset: 2px;
 }
 
-/* Outline hover fills subtly */
 .btn--outline:hover {
   background: linear-gradient(180deg, rgba(39,174,96,0.06), rgba(39,174,96,0.02));
   color: var(--color-white);
   border-color: var(--color-success);
 }
 
-/* Touch/drag feedback: while pointer is down the :active state applies; also support a data attribute for programmatic drag state */
 .btn[data-dragging="true"] {
   filter: brightness(0.95);
 }
 
+.external-icon-btn {
+  display: inline-block;
+  vertical-align:text-bottom;
+  margin-left: 5px;
+  width: 18px;
+  height: 18px;
+}
 @media (max-width: 480px) {
   .btn {
     padding: 8px 16px;

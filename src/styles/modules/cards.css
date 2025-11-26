@@ -23,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   background: #ffffff;
 }
 .card__content {
@@ -287,20 +288,44 @@
   padding: 10px 25px;
 }
 
-/* Oculta el texto inicialmente */
-.cards-services__text-wrapper {
-  opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  height: 0;
-  overflow: hidden;
+/* External link badge on images */
+.external-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.95);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  color: #004a77;
 }
 
-/* Cuando el mouse entra a la tarjeta */
+.external-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  width: 14px;
+  height: 14px;
+}
+
+.external-icon[src] {
+  display: inline-block;
+}
+
+.cards-services__text-wrapper {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.32s ease, transform 0.32s ease;
+  min-height: 48px;
+}
+
 .cards-services__card:hover .cards-services__text-wrapper {
   opacity: 1;
   transform: translateY(0);
-  height: auto;
 }
 
 /* WhatsApp Card */

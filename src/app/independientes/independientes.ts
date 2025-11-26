@@ -27,31 +27,40 @@ export class Independientes {
 
   epsList = [
     { image: "assets/img/eps/nueva_eps.png",
-      title: 'Nueva EPS'
+      title: 'Nueva EPS',
+      url: 'https://www.nuevaeps.com.co/'
     },
     { image: 'assets/img/eps/saludTotaleps.png', 
-      title: 'SaludTotal EPS-S'
+      title: 'SaludTotal EPS-S',
+      url: 'https://www.saludtotal.com.co/'
     },
     { image: 'assets/img/eps/EPS_Sanitas.png',
-      title: 'EPS Sanitas'
+      title: 'EPS Sanitas',
+      url: 'https://www.epssanitas.com/'
      },
     { image: 'assets/img/eps/sura.png' ,
-      title: 'EPS SURA'
+      title: 'EPS SURA',
+      url: 'https://www.epssura.com/'
     },
     { image: 'assets/img/eps/coosalud.png',
       title: 'Coosalud EPS',
+      url: 'https://coosalud.com/'
      },
     { image: 'assets/img/eps/compensar.png',
       title: 'Compensar EPS',
+      url: 'https://corporativo.compensar.com/salud/compensar-salud/inicio'
      },
     { image: 'assets/img/eps/mutualser.png',
       title: 'Mutualser EPS',
+      url: 'https://www.mutualser.com/'
      },
     { image: 'assets/img/eps/capitalsalud.png',
       title: 'Capitalsalud EPS-S',
+      url: 'https://www.capitalsalud.gov.co/'
      },
     { image: 'assets/img/eps/capresoca.png',
       title: 'Capresoca EPS',
+      url: 'https://www.capresoca-casanare.gov.co/'
      }
 
   ];
@@ -91,11 +100,24 @@ export class Independientes {
 
 
   pensionesList = [
-    { title: 'Protección', image: 'assets/img/pensiones/proteccion.jpg' },
-    { title: 'Porvenir', image: 'assets/img/pensiones/porvenir.webp' },
-    { title: 'Colpensiones', image: 'assets/img/pensiones/colpensiones.webp' },
-    { title: 'Oldmutual', image: 'assets/img/pensiones/oldmutual.png' },
-    { title: 'Colfondos', image: 'assets/img/pensiones/colfondos.png' }
+    { title: 'Protección', 
+      image: 'assets/img/pensiones/proteccion.jpg',
+      url: 'https://www.proteccion.com/'
+    },
+    { title: 'Porvenir',
+      image: 'assets/img/pensiones/porvenir.webp',
+      url: 'https://www.porvenir.com/'},
+    { title: 'Colpensiones', 
+      image: 'assets/img/pensiones/colpensiones.webp',
+      url: 'https://www.colpensiones.gov.co/'
+    },
+    { title: 'Oldmutual', 
+      image: 'assets/img/pensiones/oldmutual.png',
+      url: 'https://www.oldmutual.co.za/'
+    },
+    { title: 'Colfondos', 
+      image: 'assets/img/pensiones/colfondos.png,',
+      url: 'https://www.colfondos.com.co/'}
   ];
 
   currentPageP = 1;

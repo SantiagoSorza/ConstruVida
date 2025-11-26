@@ -23,12 +23,23 @@
     <div class="grid grid--auto">
       <article *ngFor="let item of paginatedCards; let i = index" class="card" role="article" [attr.aria-labelledby]="'card-' + i">
         <div class="card__image">
-          <img [src]="item.image" [alt]="'Imagen del proyecto: ' + item.title" class="card__img">
+          <a [attr.href]="item.url" [attr.target]="(item.url) ? '_blank' : null" [attr.rel]="(item.url) ? 'noopener noreferrer' : null">
+            <img [src]="item.image" [alt]="'Imagen del proyecto: ' + item.title" class="card__img">
+            <span *ngIf="(item.url) && (item.url).indexOf('http') === 0" class="external-badge" aria-hidden="true">
+              <img src="assets/img/enlace.png" alt="Enlace externo" width="18" height="18">
+            </span>
+          </a>
         </div>
         <div class="card__content">
           <h3 [id]="'card-' + i" class="card__title">
-            <a [attr.aria-label]="'Ver detalles del proyecto: ' + item.title">
+            <a
+              [attr.href]="item.url"
+              [attr.target]="(item.url) ? '_blank' : null"
+              [attr.rel]="(item.url) ? 'noopener noreferrer' : null"
+              [attr.aria-label]="'Ver detalles del proyecto: ' + item.title"
+            >
               {{item.title}}
+              <img *ngIf="(item.url) && (item.url).indexOf('http') === 0" class="external-icon" src="assets/img/enlace.png" alt="Enlace externo" width="14" height="14">
             </a>
           </h3>
         </div>
@@ -81,13 +92,22 @@
         <div class="grid grid--auto">
       <article *ngFor="let item of paginatedCardsP; let i = index" class="card" role="article" [attr.aria-labelledby]="'card-' + i">
         <div class="card__image">
-          <img [src]="item.image" [alt]="'Imagen del proyecto: ' + item.title" class="card__img">
+          <a [attr.href]="item.url" [attr.target]="item.url ? '_blank' : null" [attr.rel]="item.url ? 'noopener noreferrer' : null">
+            <img [src]="item.image" [alt]="'Imagen del proyecto: ' + item.title" class="card__img">
+            <span *ngIf="(item.url) && (item.url).indexOf('http') === 0" class="external-badge" aria-hidden="true">
+              <img src="assets/img/enlace.png" alt="Enlace externo" width="18" height="18">
+            </span>
+          </a>
         </div>
         <div class="card__content">
           <h3 [id]="'card-' + i" class="card__title">
-            <a 
+            <a
+             [attr.href]="item.url"
+             [attr.target]="item.url ? '_blank' : null"
+             [attr.rel]="item.url ? 'noopener noreferrer' : null"
              [attr.aria-label]="'Ver detalles del proyecto: ' + item.title">
               {{item.title}}
+              <img *ngIf="(item.url) && (item.url).indexOf('http') === 0" class="external-icon" src="assets/img/enlace.png" alt="Enlace externo" width="14" height="14">
             </a>
           </h3>
         </div>
@@ -138,7 +158,9 @@
         </ul>
 
         <div class="button-group">
-            <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">¿Quieres cotizar?</a>
+            <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">¿Quieres cotizar?
+              <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
+            </a>
         </div>
     </section>
 </div>
