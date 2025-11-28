@@ -1,5 +1,5 @@
 .btn {
-  display: inline-block;
+  align-items: center;
   padding: 12px 25px;
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -85,6 +85,13 @@
   margin-left: 5px;
   width: 18px;
   height: 18px;
+}
+.external-icon-btn-cotiza {
+  display: inline-block;
+  vertical-align:text-bottom;
+  margin-left: 5px;
+  width: 18px;
+  height: 1px;
 }
 @media (max-width: 480px) {
   .btn {

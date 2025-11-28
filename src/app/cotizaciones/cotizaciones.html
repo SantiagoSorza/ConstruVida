@@ -11,7 +11,7 @@
   <div class="hero__content hero__content--left">
     <h1 class="hero__title">Soluciones de Protección y Bienestar para Todos</h1>
 
-    <div class="hero__actions">
+    <div class="hero__actions-cotiza">
       <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">SOLICITAR COTIZACIÓN
         <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
       </a>
@@ -33,7 +33,9 @@
         <ul class="plan-card__list">
           <li class="plan-card__list-item" *ngFor="let item of plan.items">{{item}}</li>
         </ul>
-        <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">Me interesa</a>
+        <a class="btn btn--primary hero__cta-center" [href]="whatsappLink" target="_blank">Me interesa
+          <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
+        </a>
       </article>
     </div>
   </section>
