@@ -82,15 +82,4 @@
   pointer-events: none;
 }
 
-@media (max-width: 480px) {
-  .banner {
-    padding: var(--space-3);
-    text-align: center;
-  }
-
-  .banner__title {
-    font-size: var(--font-size-lg);
-  }
-}
-
 

@@ -96,24 +96,3 @@
 .is-closed {
   display: none;
 }
-
-/* Responsive States */
-@media (max-width: 768px) {
-  .is-hidden-mobile {
-    display: none !important;
-  }
-
-  .is-visible-mobile {
-    display: block !important;
-  }
-}
-
-@media (min-width: 769px) {
-  .is-hidden-desktop {
-    display: none !important;
-  }
-
-  .is-visible-desktop {
-    display: block !important;
-  }
-}

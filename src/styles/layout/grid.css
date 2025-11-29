@@ -64,14 +64,3 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-@media (max-width: 768px) {
-  .grid--2cols,
-  .grid--3cols,
-  .grid--4cols {
-    grid-template-columns: 1fr;
-  }
-
-  .grid--auto {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
