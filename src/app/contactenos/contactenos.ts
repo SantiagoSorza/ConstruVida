@@ -13,7 +13,7 @@ import { FooterComponent } from '../footer/footer';
 export class Contactenos {
     whatsappNumber = '573189412003';
   
-    whatsappMessage = 'Hola, me gustaría .';
+    whatsappMessage = 'Hola, Quisiera solicitar una cotización y saber las opciones que manejan.';
   
     
     get whatsappLink() {
@@ -23,6 +23,28 @@ export class Contactenos {
 
     openWhatsApp() {
       window.open(this.whatsappLink, '_blank');
+    }
+    
+    // Email contact details and helper
+    emailAddress = 'contacto@construvida.com';
+    emailSubject = 'Solicitud de cotización - ConstruVida';
+    emailBody = 'Hola, me interesa recibir información y una cotización. Mi nombre es: [tu nombre]';
+
+    get mailtoLink() {
+      const subject = encodeURIComponent(this.emailSubject);
+      const body = encodeURIComponent(this.emailBody);
+      return `mailto:${this.emailAddress}?subject=${subject}&body=${body}`;
+    }
+
+    openEmail() {
+      window.location.href = this.mailtoLink;
+    }
+
+    get gmailLink() {
+      const to = encodeURIComponent(this.emailAddress);
+      const subject = encodeURIComponent(this.emailSubject);
+      const body = encodeURIComponent(this.emailBody);
+      return `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
     }
     
 }

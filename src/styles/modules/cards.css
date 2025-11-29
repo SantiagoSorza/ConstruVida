@@ -329,6 +329,11 @@
 /* Card WhatsApp */
 .card__whatsapp__container {
   padding: var(--space-6) var(--space-4);
+  display: flex;
+  gap: var(--space-4);
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card__whatsapp__card {
@@ -336,8 +341,21 @@
   padding: calc(var(--space-5) + 8px);
   border-radius: calc(var(--radius-lg) + 6px);
   box-shadow: 0 28px 60px rgba(2, 18, 26, 0.55);
-  max-width: 520px;
-  margin: 0 auto;
+  flex: 1 1 480px;
+  min-width: 280px;
+  color: #eaf6f5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.card__email__card {
+  background: linear-gradient(180deg, #062b33 0%, #083b44 100%);
+  padding: calc(var(--space-5) + 8px);
+  border-radius: calc(var(--radius-lg) + 6px);
+  box-shadow: 0 28px 60px rgba(2, 18, 26, 0.55);
   color: #eaf6f5;
   text-align: center;
   display: flex;
@@ -359,15 +377,18 @@
   object-fit: contain;
 }
 
+.card__gmail__image {
+  width: 150%;
+  height: 150%;
+}
+
 .card__whatsapp__image-container {
-  width: 80px;
+  width: 120px;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
-  background: rgba(37, 211, 102, 0.12);
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+  background: rgba(37, 211, 101, 0);
 }
 
 .card__whatsapp__text {
@@ -389,15 +410,6 @@
   transition: var(--transition-normal);
 }
 
-.card__whatsapp__submit:hover {
-  transform: translateY(-3px);
-  opacity: 0.98;
-  color: #fff; 
-}
-
-.card__whatsapp__submit:focus {
-  color: #fff; 
-}
 
 
 

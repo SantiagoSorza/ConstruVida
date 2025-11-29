@@ -12,8 +12,13 @@ import { FooterComponent } from '../footer/footer';
 export class Independientes {
      whatsappNumber = '573189412003';
   
-    whatsappMessage = 'Hola, me gustaría solicitar una cotización.';
+    whatsappMessage = 'Hola, me gustaría solicitar una cotización como independiente.';
   
+    get whatsappLink() {
+      const encodedMessage = encodeURIComponent(this.whatsappMessage);
+      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+    }
+
     
     getItemWhatsAppLink(item: { title: string }, type: 'eps' | 'pension') {
     const base = this.whatsappNumber;
@@ -23,11 +28,7 @@ export class Independientes {
     return `https://wa.me/${base}?text=${encodedMessage}`;
   }
 
-    get whatsappLink() {
-      const encodedMessage = encodeURIComponent(this.whatsappMessage);
-      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
-    }
-
+  
     openWhatsApp() {
       window.open(this.whatsappLink, '_blank');
     }

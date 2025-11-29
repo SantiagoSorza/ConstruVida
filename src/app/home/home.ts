@@ -12,14 +12,17 @@ import { FooterComponent } from '../footer/footer';
 export class HomeComponent {
     whatsappNumber = '573189412003';
   
-    whatsappMessage = 'Hola, me gustaría solicitar una cotización gratuita para mi proyecto de construcción.';
-  
-    
+    whatsappMessage = 'Hola, me gustaría tener mas informacion sobre las EPS, ARL y pensiones que manejan.';  
+    whatsappMessageAsis = 'Hola, Quisiera solicitar una cotización y saber las opciones que manejan.';  
+
     get whatsappLink() {
       const encodedMessage = encodeURIComponent(this.whatsappMessage);
       return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
     }
-
+    get whatsappLinkAsis() {
+      const encodedMessage = encodeURIComponent(this.whatsappMessageAsis);
+      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+    }
     openWhatsApp() {
       window.open(this.whatsappLink, '_blank');
     }

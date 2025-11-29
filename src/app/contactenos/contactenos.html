@@ -15,8 +15,10 @@
 
   <section class="card__whatsapp">
     <div class="card__whatsapp__container">
-      <div class="card__whatsapp__card" role="region" aria-labelledby="card__whatsapp__title">
-        <h3 id="card__whatsapp__title">Solicita tu cotización gratuita</h3>
+      
+      <div class="card__whatsapp__card">
+          <h3 id="card__email__title">Enviar por WhatsApp</h3>
+
 
         <div class="card__whatsapp__image-container">
           <img src="assets/img/pngwing.com.png" alt="WhatsApp contacto" class="card__whatsapp__image">
@@ -24,13 +26,23 @@
 
         <p class="card__whatsapp__text">Contáctanos directamente por WhatsApp y recibe atención personalizada de inmediato. Déjanos tu nombre y tu consulta.</p>
 
-        <a
-          [href]="whatsappLink"
-          target="_blank"
-          class="btn btn--primary hero__cta"
-          aria-label="Chatear por WhatsApp para solicitar cotización"
-        >
+        <a [href]="whatsappLink" target="_blank" class="btn btn--primary hero__cta">
           Enviar y chatear por WhatsApp
+          <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
+        </a>
+      </div>
+
+      <div class="card__whatsapp__card card__email__card">
+        <h3 id="card__email__title">Enviar por correo</h3>
+
+        <div class="card__whatsapp__image-container">
+          <img src="assets/img/gmail.png" alt="Correo contacto" class="card__gmail__image">
+        </div>
+
+        <p class="card__whatsapp__text">También puedes contáctanos por correo y recibe atención personalizada de inmediato. Déjanos tu nombre y tu consulta.</p>
+
+        <a [href]="gmailLink" target="_blank" class="btn btn--primary hero__cta">
+          Enviar por correo
           <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
         </a>
       </div>

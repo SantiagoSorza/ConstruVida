@@ -12,10 +12,10 @@
     <h1 class="hero__title">Soluciones de Protección y Bienestar para Todos</h1>
 
     <div class="hero__actions-cotiza">
-      <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje por WhatsApp para solicitar cotización general">SOLICITAR COTIZACIÓN
+      <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank" >SOLICITAR COTIZACIÓN
         <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
       </a>
-      <a class="btn btn--primary hero__cta">VER PLANES DISPONIBLES
+      <a class="btn btn--primary hero__cta" [href]="whatsappLinkPlan" target="_blank" >VER PLANES DISPONIBLES
         <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
       </a>
     </div>
@@ -33,7 +33,7 @@
         <ul class="plan-card__list">
           <li class="plan-card__list-item" *ngFor="let item of plan.items">{{item}}</li>
         </ul>
-        <a class="btn btn--primary hero__cta-center" [href]="getPlanWhatsAppLink(plan)" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Enviar mensaje por WhatsApp para solicitar cotización del ' + plan.title">Me interesa
+        <a class="btn btn--primary hero__cta-center" [href]="getPlanWhatsAppLink(plan)" target="_blank" >Me interesa
           <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
         </a>
       </article>
