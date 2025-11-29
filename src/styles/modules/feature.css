@@ -5,7 +5,7 @@
 
 .features-section {
   padding: var(--space-6) var(--space-4);
-  background: #ebebeb;
+  background: var(--color-feature-bg);
 }
 
 .features__grid {
@@ -25,7 +25,7 @@
 .features__card-title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  color: #003d77;
+  color: var(--color-primary-700);
   margin-bottom: var(--space-3);
 }
 
@@ -68,8 +68,4 @@
   font-weight: var(--font-weight-bold);
 }
 
-.btn--yellow:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
 

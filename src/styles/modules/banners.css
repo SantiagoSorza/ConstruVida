@@ -76,7 +76,7 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
-  color: #ffffff;
+  color: var(--color-white);
   text-align: center;
   padding: var(--space-4);
   pointer-events: none;

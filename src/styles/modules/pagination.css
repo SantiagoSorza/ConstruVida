@@ -31,20 +31,6 @@
   font-size: var(--font-size-lg);
 }
 
-.pagination__btn:hover:not(:disabled) {
-  background: var(--color-primary);
-  color: white;
-  transform: scale(1.1);
-}
 
-.pagination__btn.is-active {
-  background: var(--color-primary);
-  color: rgb(255, 255, 255);
-  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
-}
 
-.pagination__btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
 

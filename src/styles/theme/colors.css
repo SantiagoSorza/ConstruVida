@@ -26,4 +26,24 @@
 
   --bg-light: #ffffff;
   --bg-dark: #1a1a1a;
+
+  --color-border-muted: #e3e3e3;
+  --color-cta-blue: #1d7bd3; 
+  --color-hero-start: #004a77;
+  --color-hero-end: #0066a1;
+  --color-feature-bg: #ebebeb;
+  --color-primary-700: #003d77;
+  --color-primary-900: #002a55;
+
+  --color-whatsapp-dark-1: #062b33;
+  --color-whatsapp-dark-2: #083b44;
+  --color-whatsapp-text: #eaf6f5;
+  --color-whatsapp-btn-start: #27d66a;
+  --color-whatsapp-btn-end: #1aa85a;
+
+  --color-muted-bg: #f7f7f7;
+  --color-btn-hover-start: #39b86a;
+  --color-btn-hover-end: #27ae60;
+  --color-btn-active-start: #1e8449;
+  --color-btn-active-end: #196f3d;
 }

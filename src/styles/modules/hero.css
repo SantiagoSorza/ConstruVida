@@ -95,10 +95,7 @@
   cursor: pointer;
   transition: var(--transition-normal);
 }
-.hero__cta:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
+
 
 .hero__actions {
   display: flex;
@@ -132,35 +129,5 @@
   text-align: center;
 }
 
-.hero--overlay-light .hero__overlay {
-  background: rgba(0, 0, 0, 0.2);
-}
 
-.hero--overlay-dark .hero__overlay {
-  background: rgba(0, 0, 0, 0.55);
-}
-
-.hero--green {
-  background: var(--green-section);
-}
-
-.hero--green .hero__overlay {
-  background: rgba(0, 100, 0, 0.35);
-}
-
-.hero--blue {
-  background: linear-gradient(135deg, #004a77 0%, #0066a1 100%);
-}
-
-.hero--lg {
-  height: 700px;
-}
-
-.hero--secondary {
-  height: 500px;
-}
-
-.hero--sm {
-  height: 300px;
-}
 

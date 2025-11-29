@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background: #ffffff;
+  background: var(--bg-light);
 }
 .card__content {
   padding: var(--space-3);
@@ -50,13 +50,12 @@
   margin-top: auto;
 }
 
-/* Card Variants */
 .card--plan {
-  border: 3px solid #004a77;
+  border: 3px solid var(--color-hero-start);
 }
 
 .card--plan .card__title {
-  color: #004a77;
+  color: var(--color-hero-start);
 }
 
 .card--logo {
@@ -79,9 +78,7 @@
   color: var(--color-gray-400);
 }
 
-.card.is-active {
-  box-shadow: 0 0 0 3px var(--color-primary);
-}
+
 
 .insurance-section {
   padding: var(--space-6) var(--space-4);
@@ -92,7 +89,7 @@
 .insurance__title {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
-  color: #003d77;
+  color: var(--color-primary-700);
   margin-bottom: var(--space-2);
 }
 
@@ -141,9 +138,8 @@
   line-height: 1.6;
 }
 
-/* Cotizaciones */
 .plan-card {
-  border: 5px solid #003d77;
+  border: 5px solid var(--color-primary-700);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
   background: white;
@@ -164,7 +160,7 @@
   font-size: clamp(1.25rem, 2.2vw, 1.75rem);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--space-2);
-  color: #003d77;
+  color: var(--color-primary-700);
 }
 
 .plan-card__price {
@@ -178,7 +174,7 @@
   text-align: left;
   margin-bottom: var(--space-4);
   line-height: 1.8;
-  color: #333;
+  color: var(--text-dark);
   flex-grow: 1;
 }
 
@@ -190,13 +186,13 @@
 .plan-card__list-item:first-child {
   font-weight: var(--font-weight-bold);
   font-size: clamp(1rem, 1.15vw, 1.05rem);
-  color: #002a55;
+  color: var(--color-primary-900);
 }
 
 .plan-card__cta {
   width: 100%;
   font-weight: var(--font-weight-semibold);
-  background: #eeff00;
+  background: var(--color-accent);
   border-radius: var(--radius-md);
   color: #000;
   padding: 10px 0;
@@ -209,7 +205,6 @@
   transform: translateY(-2px);
 }
 
-/* Empresas */
 .cards-services {
   padding: var(--space-6) var(--space-4);
   text-align: center;
@@ -218,7 +213,7 @@
 .cards-services__title {
   font-size: clamp(1.6rem, 2.6vw, 2.5rem);
   font-weight: var(--font-weight-bold);
-  color: #003d77;
+  color: var(--color-primary-700);
   margin-bottom: var(--space-2);
 }
 
@@ -237,7 +232,7 @@
 }
 
 .cards-services__card {
-  background: #f7f7f7;
+  background: var(--color-muted-bg);
   padding: var(--space-5);
   border-radius: var(--radius-lg);
   text-align: center;
@@ -272,7 +267,7 @@
 .cards-services__card-title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-  color: #003d77;
+  color: var(--color-primary-700);
   margin-bottom: var(--space-2);
 }
 
@@ -299,7 +294,7 @@
   background: rgba(255,255,255,0.95);
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  color: #004a77;
+  color: var(--color-hero-start);
 }
 
 .external-icon {
@@ -326,7 +321,6 @@
   transform: translateY(0);
 }
 
-/* Card WhatsApp */
 .card__whatsapp__container {
   padding: var(--space-6) var(--space-4);
   display: flex;
@@ -337,13 +331,13 @@
 }
 
 .card__whatsapp__card {
-  background: linear-gradient(180deg, #062b33 0%, #083b44 100%);
+  background: linear-gradient(180deg, var(--color-whatsapp-dark-1) 0%, var(--color-whatsapp-dark-2) 100%);
   padding: calc(var(--space-5) + 8px);
   border-radius: calc(var(--radius-lg) + 6px);
   box-shadow: 0 28px 60px rgba(2, 18, 26, 0.55);
   flex: 1 1 480px;
   min-width: 280px;
-  color: #eaf6f5;
+  color: var(--color-whatsapp-text);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -352,11 +346,11 @@
 }
 
 .card__email__card {
-  background: linear-gradient(180deg, #062b33 0%, #083b44 100%);
+  background: linear-gradient(180deg, var(--color-whatsapp-dark-1) 0%, var(--color-whatsapp-dark-2) 100%);
   padding: calc(var(--space-5) + 8px);
   border-radius: calc(var(--radius-lg) + 6px);
   box-shadow: 0 28px 60px rgba(2, 18, 26, 0.55);
-  color: #eaf6f5;
+  color: var(--color-whatsapp-text);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -366,7 +360,7 @@
 
 .card__whatsapp__card h3 {
   margin: 0;
-  color: #fff;
+  color: var(--color-white);
   font-size: 1.45rem;
   line-height: 1.1;
 }
@@ -392,7 +386,7 @@
 }
 
 .card__whatsapp__text {
-  color: rgba(234, 246, 245, 0.95);
+  color: var(--color-whatsapp-text);
   max-width: 420px;
   margin: 0;
   line-height: 1.6;
@@ -400,8 +394,8 @@
 
 .card__whatsapp__submit {
   display: inline-block;
-  background: linear-gradient(180deg, #27d66a, #1aa85a);
-  color: #fff;
+  background: linear-gradient(180deg, var(--color-whatsapp-btn-start), var(--color-whatsapp-btn-end));
+  color: var(--color-white);
   padding: 12px 22px;
   border-radius: 30px;
   text-decoration: none;

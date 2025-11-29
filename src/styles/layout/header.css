@@ -65,8 +65,7 @@
   border-radius: var(--radius-md);
 }
 
-.header__menu-item a:hover,
-.header__menu-item a.is-active {
+.header__menu-item a:hover {
   background: var(--color-primary);
   color: white;
 }
@@ -88,14 +87,3 @@
   transition: var(--transition-normal);
 }
 
-.header__hamburger.is-active .header__hamburger-bar:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 10px);
-}
-
-.header__hamburger.is-active .header__hamburger-bar:nth-child(2) {
-  opacity: 0;
-}
-
-.header__hamburger.is-active .header__hamburger-bar:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
