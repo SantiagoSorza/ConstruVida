@@ -10,9 +10,9 @@ import { FooterComponent } from '../footer/footer';
   templateUrl: './empresas.html',
 })
 export class Empresas {
-    whatsappNumber = '573148267848';
+    whatsappNumber = '573189412003';
   
-    whatsappMessage = 'Hola, me gustaría solicitar una cotización gratuita para mi proyecto de construcción.';
+    whatsappMessage = 'Hola, me gustaría tener mas informacion sobre las EPS, ARL y pensiones para empresas.';
   
     
     get whatsappLink() {

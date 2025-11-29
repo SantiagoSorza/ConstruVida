@@ -11,9 +11,9 @@ import { FooterComponent } from '../footer/footer';
   templateUrl: './contactenos.html',
 })
 export class Contactenos {
-    whatsappNumber = '573148267848';
+    whatsappNumber = '573189412003';
   
-    whatsappMessage = 'Hola, me gustaría solicitar una cotización gratuita para mi proyecto de construcción.';
+    whatsappMessage = 'Hola, me gustaría .';
   
     
     get whatsappLink() {

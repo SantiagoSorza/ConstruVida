@@ -2,20 +2,27 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header';
 import { FooterComponent } from '../footer/footer';
-import { RouterLink } from "@angular/router";
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-independientes',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, RouterLink],
+  imports: [CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './independientes.html',
 })
 export class Independientes {
-     whatsappNumber = '573148267848';
+     whatsappNumber = '573189412003';
   
-    whatsappMessage = 'Hola, me gustaría solicitar una cotización gratuita para mi proyecto de construcción.';
+    whatsappMessage = 'Hola, me gustaría solicitar una cotización.';
   
     
+    getItemWhatsAppLink(item: { title: string }, type: 'eps' | 'pension') {
+    const base = this.whatsappNumber;
+    const label = type === 'eps' ? 'EPS' : 'pensión';
+    const message = `Hola, quiero consulta para afiliarme a la ${label}: ${item.title}`;
+    const encodedMessage = encodeURIComponent(message);
+    return `https://wa.me/${base}?text=${encodedMessage}`;
+  }
+
     get whatsappLink() {
       const encodedMessage = encodeURIComponent(this.whatsappMessage);
       return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
@@ -116,7 +123,7 @@ export class Independientes {
       url: 'https://www.oldmutual.co.za/'
     },
     { title: 'Colfondos', 
-      image: 'assets/img/pensiones/colfondos.png,',
+      image: 'assets/img/pensiones/colfondos.png',
       url: 'https://www.colfondos.com.co/'}
   ];
 
@@ -164,5 +171,7 @@ export class Independientes {
     'En todos los casos donde se incluyan beneficiarios, también debe adjuntarse la cédula del cotizante.',
     'Si la persona es independiente por OPS y requiere afiliación a la ARL, debe anexar el contrato por prestación de servicios.'
   ];
+
+ 
 
 }

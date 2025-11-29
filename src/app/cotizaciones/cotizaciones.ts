@@ -10,18 +10,32 @@ import { FooterComponent } from '../footer/footer';
   templateUrl: './cotizaciones.html',
 })
 export class Cotizaciones {
-    whatsappNumber = '573148267848';
+    whatsappNumber = '573189412003';
   
-    whatsappMessage = 'Hola, me gustaría solicitar una cotización gratuita para mi proyecto de construcción.';
-  
+    whatsappMessage = 'Hola, me gustaría solicitar una cotización.';
+    whatsappMessagePlan = 'Hola, me gustaría ver los planes que tienen disponibles.';
+
     
     get whatsappLink() {
       const encodedMessage = encodeURIComponent(this.whatsappMessage);
       return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
     }
+    get whatsappLinkPlan() {
+      const encodedMessage = encodeURIComponent(this.whatsappMessagePlan);
+      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+    }
 
     openWhatsApp() {
       window.open(this.whatsappLink, '_blank');
+    }
+
+    getPlanWhatsAppLink(plan: { title: string; items?: string[] }) {
+      const firstItem = plan.items && plan.items.length ? plan.items[0] : '';
+      const message = firstItem
+        ? `Hola, quiero información y cotización para el plan: ${plan.title}  ${firstItem}`
+        : `Hola, quiero información y cotización para el plan: ${plan.title}`;
+      const encodedMessage = encodeURIComponent(message);
+      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
     }
 
   plans = [
