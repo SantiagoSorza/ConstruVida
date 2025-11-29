@@ -17,5 +17,6 @@
 @import 'styles/modules/buttons.css';
 @import 'styles/modules/feature.css';
 @import 'styles/modules/banners.css';
+@import 'styles/modules/list.css';
 
 @import 'styles/state/states.css';

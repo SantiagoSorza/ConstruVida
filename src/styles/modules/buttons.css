@@ -93,9 +93,4 @@
   width: 18px;
   height: 1px;
 }
-@media (max-width: 480px) {
-  .btn {
-    padding: 8px 16px;
-    font-size: var(--font-size-sm);
-  }
-}
+

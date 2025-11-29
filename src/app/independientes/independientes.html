@@ -153,17 +153,21 @@
     </section>
 
     <section class="section">
-        <h2 class="section-title">Requisitos para la afiliación</h2>
+      <h2 class="section-title">Requisitos para la afiliación</h2>
 
-        <ul class="list list--requirements">
-            <li *ngFor="let req of requisitos">{{ req }}</li>
-        </ul>
+      <ul class="requirements-list">
+        <li *ngFor="let req of requisitos">
+          <span class="req-circle"></span>
+          <span class="req-text">{{ req }}</span>
+        </li>
+      </ul>
 
-        <div class="button-group">
-            <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">¿Quieres cotizar?
-              <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
-            </a>
-        </div>
+      <div class="button-group">
+        <a class="btn btn--primary hero__cta" [href]="whatsappLink" target="_blank">
+          ¿Quieres cotizar?
+          <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
+        </a>
+      </div>
     </section>
 </div>
 </main>

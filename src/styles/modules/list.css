@@ -1,0 +1,33 @@
+.requirements-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* minimal: asegurar que el li sea flex y el texto se centre en su bloque */
+.requirements-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e3e3e3;
+  text-align: left; /* ← evita que se centre el texto */
+}
+
+/* círculo: tamaño fijo y no se encoge */
+.req-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #1d7bd3;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* texto: que ocupe el resto del espacio */
+.req-text {
+  flex: 1;
+  line-height: 1.5; 
+  font-size: 1.07rem;  /* importante para el cálculo del centro visual */
+}
+

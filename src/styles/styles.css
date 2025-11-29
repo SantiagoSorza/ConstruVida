@@ -23,5 +23,6 @@
 @import url('./modules/banners.css');
 @import url('./modules/requirements.css');
 @import url('./modules/feature.css');
+@import url('./modules/list.css');
 
 @import url('./state/states.css');

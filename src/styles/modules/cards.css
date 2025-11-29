@@ -79,12 +79,10 @@
   color: var(--color-gray-400);
 }
 
-/* Card States */
 .card.is-active {
   box-shadow: 0 0 0 3px var(--color-primary);
 }
 
-/* Card home */
 .insurance-section {
   padding: var(--space-6) var(--space-4);
   text-align: center;
@@ -288,7 +286,7 @@
   padding: 10px 25px;
 }
 
-/* External link badge on images */
+
 .external-badge {
   position: absolute;
   top: 8px;
@@ -328,7 +326,7 @@
   transform: translateY(0);
 }
 
-/* WhatsApp Card */
+/* Card WhatsApp */
 .card__whatsapp__container {
   padding: var(--space-6) var(--space-4);
 }
@@ -394,11 +392,11 @@
 .card__whatsapp__submit:hover {
   transform: translateY(-3px);
   opacity: 0.98;
-  color: #fff; /* Maintain white text color on hover */
+  color: #fff; 
 }
 
 .card__whatsapp__submit:focus {
-  color: #fff; /* Maintain white text color on focus */
+  color: #fff; 
 }
 
 
