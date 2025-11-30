@@ -1,5 +1,4 @@
 
-
 .header {
   position: fixed;
   top: 0;
@@ -31,6 +30,7 @@
   white-space: nowrap;
   display: flex;
   align-items: center;
+  z-index: 1001;
 }
 
 .header__logo:hover {
@@ -77,6 +77,8 @@
   border: none;
   cursor: pointer;
   gap: 4px;
+  padding: 8px;
+  z-index: 1001;
 }
 
 .header__hamburger-bar {
@@ -87,3 +89,104 @@
   transition: var(--transition-normal);
 }
 
+/* ============================== */
+/* RESPONSIVE STYLES */
+/* ============================== */
+
+/* Tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+  .header__nav {
+    padding: 0 var(--space-3);
+  }
+
+  .header__menu {
+    gap: var(--space-3);
+  }
+
+  .header__menu-item a {
+    font-size: 14px;
+    padding: var(--space-1) var(--space-1);
+  }
+}
+
+/* Móviles y tablets pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .header__container {
+    height: 60px;
+  }
+
+  .header__logo-img {
+    height: 40px;
+  }
+
+  .header__hamburger {
+    display: flex;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 60px);
+    background: var(--bg-light);
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-4) 0;
+    box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+  }
+
+  .header__menu.is-open {
+    right: 0;
+  }
+
+  .header__menu-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .header__menu-item a {
+    padding: var(--space-3) var(--space-4);
+    font-size: 16px;
+    border-radius: 0;
+  }
+
+  .header__menu-item a:hover {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--color-primary);
+  }
+
+  .header__menu-item a.is-active {
+    background: var(--color-primary);
+    color: white;
+    border-left: 4px solid #2980b9;
+  }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  .header__nav {
+    padding: 0 var(--space-2);
+  }
+
+  .header__container {
+    height: 55px;
+  }
+
+  .header__logo-img {
+    height: 35px;
+  }
+
+  .header__menu {
+    width: 100%;
+    top: 55px;
+    height: calc(100vh - 55px);
+  }
+
+  .header__hamburger-bar {
+    width: 22px;
+    height: 2.5px;
+  }
+}

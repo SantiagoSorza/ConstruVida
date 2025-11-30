@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header';
 import { FooterComponent } from '../footer/footer';
@@ -9,37 +9,55 @@ import { FooterComponent } from '../footer/footer';
   imports: [CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './empresas.html',
 })
-export class Empresas {
-    whatsappNumber = '573189412003';
-  
-    whatsappMessage = 'Hola, me gustaría tener mas informacion sobre las EPS, ARL y pensiones para empresas.';
-  
-    
-    get whatsappLink() {
-      const encodedMessage = encodeURIComponent(this.whatsappMessage);
-      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
-    }
+export class Empresas implements OnInit {
+  ngOnInit() {
+    // Scroll to top when component loads
+    window.scrollTo(0, 0);
+  }
 
-    openWhatsApp() {
-      window.open(this.whatsappLink, '_blank');
-    }
+  whatsappNumber = '573189412003';
+
+  whatsappMessage = 'Hola, me gustaría tener mas informacion sobre las EPS, ARL y pensiones para empresas.';
+
+
+  get whatsappLink() {
+    const encodedMessage = encodeURIComponent(this.whatsappMessage);
+    return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+  }
+
+  openWhatsApp() {
+    window.open(this.whatsappLink, '_blank');
+  }
+
   companies = [
-    { id: 1, name: 'Construcciones del Norte S.A.S', specialty: 'Construcción Residencial',
-      description: 'Empresa líder en proyectos residenciales de alta gama. Más de 25 años de experiencia en el sector.' },
+    {
+      id: 1, name: 'Construcciones del Norte S.A.S', specialty: 'Construcción Residencial',
+      description: 'Empresa líder en proyectos residenciales de alta gama. Más de 25 años de experiencia en el sector.'
+    },
 
-    { id: 2, name: 'Ingeniería y Obras Civiles', specialty: 'Obras Civiles',
-      description: 'Especialistas en infraestructura vial, puentes y obras de gran envergadura. Certificación ISO 9001.' },
+    {
+      id: 2, name: 'Ingeniería y Obras Civiles', specialty: 'Obras Civiles',
+      description: 'Especialistas en infraestructura vial, puentes y obras de gran envergadura. Certificación ISO 9001.'
+    },
 
-    { id: 3, name: 'Arquitectura Moderna Ltda', specialty: 'Diseño y Construcción',
-      description: 'Fusionamos diseño arquitectónico innovador con construcción de calidad superior.' },
+    {
+      id: 3, name: 'Arquitectura Moderna Ltda', specialty: 'Diseño y Construcción',
+      description: 'Fusionamos diseño arquitectónico innovador con construcción de calidad superior.'
+    },
 
-    { id: 4, name: 'Constructora Industrial Pro', specialty: 'Construcción Industrial',
-      description: 'Proyectos industriales y bodegas logísticas. Expertos en estructuras metálicas y grandes espacios.' },
+    {
+      id: 4, name: 'Constructora Industrial Pro', specialty: 'Construcción Industrial',
+      description: 'Proyectos industriales y bodegas logísticas. Expertos en estructuras metálicas y grandes espacios.'
+    },
 
-    { id: 5, name: 'Edificaciones Comerciales', specialty: 'Centros Comerciales',
-      description: 'Construcción de espacios comerciales, oficinas corporativas y edificios multifamiliares.' },
+    {
+      id: 5, name: 'Edificaciones Comerciales', specialty: 'Centros Comerciales',
+      description: 'Construcción de espacios comerciales, oficinas corporativas y edificios multifamiliares.'
+    },
 
-    { id: 6, name: 'Remodelaciones Premium', specialty: 'Remodelación y Acabados',
-      description: 'Especialistas en remodelación integral de viviendas y locales comerciales con acabados de lujo.' },
+    {
+      id: 6, name: 'Remodelaciones Premium', specialty: 'Remodelación y Acabados',
+      description: 'Especialistas en remodelación integral de viviendas y locales comerciales con acabados de lujo.'
+    },
   ];
 }

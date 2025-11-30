@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header';
 import { FooterComponent } from '../footer/footer';
@@ -9,18 +9,23 @@ import { FooterComponent } from '../footer/footer';
   imports: [CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './independientes.html',
 })
-export class Independientes {
-     whatsappNumber = '573189412003';
-  
-    whatsappMessage = 'Hola, me gustaría solicitar una cotización como independiente.';
-  
-    get whatsappLink() {
-      const encodedMessage = encodeURIComponent(this.whatsappMessage);
-      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
-    }
+export class Independientes implements OnInit {
+  ngOnInit() {
+    // Scroll to top when component loads
+    window.scrollTo(0, 0);
+  }
 
-    
-    getItemWhatsAppLink(item: { title: string }, type: 'eps' | 'pension') {
+  whatsappNumber = '573189412003';
+
+  whatsappMessage = 'Hola, me gustaría solicitar una cotización como independiente.';
+
+  get whatsappLink() {
+    const encodedMessage = encodeURIComponent(this.whatsappMessage);
+    return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+  }
+
+
+  getItemWhatsAppLink(item: { title: string }, type: 'eps' | 'pension') {
     const base = this.whatsappNumber;
     const label = type === 'eps' ? 'EPS' : 'pensión';
     const message = `Hola, quiero consulta para afiliarme a la ${label}: ${item.title}`;
@@ -28,48 +33,57 @@ export class Independientes {
     return `https://wa.me/${base}?text=${encodedMessage}`;
   }
 
-  
-    openWhatsApp() {
-      window.open(this.whatsappLink, '_blank');
-    }
+
+  openWhatsApp() {
+    window.open(this.whatsappLink, '_blank');
+  }
 
   epsList = [
-    { image: "assets/img/eps/nueva_eps.png",
+    {
+      image: "assets/img/eps/nueva_eps.png",
       title: 'Nueva EPS',
       url: 'https://www.nuevaeps.com.co/'
     },
-    { image: 'assets/img/eps/saludTotaleps.png', 
+    {
+      image: 'assets/img/eps/saludTotaleps.png',
       title: 'SaludTotal EPS-S',
       url: 'https://www.saludtotal.com.co/'
     },
-    { image: 'assets/img/eps/EPS_Sanitas.png',
+    {
+      image: 'assets/img/eps/EPS_Sanitas.png',
       title: 'EPS Sanitas',
       url: 'https://www.epssanitas.com/'
-     },
-    { image: 'assets/img/eps/sura.png' ,
+    },
+    {
+      image: 'assets/img/eps/sura.png',
       title: 'EPS SURA',
       url: 'https://www.epssura.com/'
     },
-    { image: 'assets/img/eps/coosalud.png',
+    {
+      image: 'assets/img/eps/coosalud.png',
       title: 'Coosalud EPS',
       url: 'https://coosalud.com/'
-     },
-    { image: 'assets/img/eps/compensar.png',
+    },
+    {
+      image: 'assets/img/eps/compensar.png',
       title: 'Compensar EPS',
       url: 'https://corporativo.compensar.com/salud/compensar-salud/inicio'
-     },
-    { image: 'assets/img/eps/mutualser.png',
+    },
+    {
+      image: 'assets/img/eps/mutualser.png',
       title: 'Mutualser EPS',
       url: 'https://www.mutualser.com/'
-     },
-    { image: 'assets/img/eps/capitalsalud.png',
+    },
+    {
+      image: 'assets/img/eps/capitalsalud.png',
       title: 'Capitalsalud EPS-S',
       url: 'https://www.capitalsalud.gov.co/'
-     },
-    { image: 'assets/img/eps/capresoca.png',
+    },
+    {
+      image: 'assets/img/eps/capresoca.png',
       title: 'Capresoca EPS',
       url: 'https://www.capresoca-casanare.gov.co/'
-     }
+    }
 
   ];
   currentPage = 1;
@@ -102,37 +116,44 @@ export class Independientes {
   }
 
   get pages() {
-    return Array.from({length: this.totalPages}, (_, i) => i + 1);
+    return Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
 
 
 
   pensionesList = [
-    { title: 'Protección', 
+    {
+      title: 'Protección',
       image: 'assets/img/pensiones/proteccion.jpg',
       url: 'https://www.proteccion.com/'
     },
-    { title: 'Porvenir',
+    {
+      title: 'Porvenir',
       image: 'assets/img/pensiones/porvenir.webp',
-      url: 'https://www.porvenir.com/'},
-    { title: 'Colpensiones', 
+      url: 'https://www.porvenir.com/'
+    },
+    {
+      title: 'Colpensiones',
       image: 'assets/img/pensiones/colpensiones.webp',
       url: 'https://www.colpensiones.gov.co/'
     },
-    { title: 'Oldmutual', 
+    {
+      title: 'Oldmutual',
       image: 'assets/img/pensiones/oldmutual.png',
       url: 'https://www.oldmutual.co.za/'
     },
-    { title: 'Colfondos', 
+    {
+      title: 'Colfondos',
       image: 'assets/img/pensiones/colfondos.png',
-      url: 'https://www.colfondos.com.co/'}
+      url: 'https://www.colfondos.com.co/'
+    }
   ];
 
   currentPageP = 1;
   itemsPerPageP = 3;
 
   get paginatedCardsP() {
-    const start = (this.currentPageP - 1) * this. itemsPerPageP;
+    const start = (this.currentPageP - 1) * this.itemsPerPageP;
     const end = start + this.itemsPerPageP;
     return this.pensionesList.slice(start, end);
   }
@@ -158,7 +179,7 @@ export class Independientes {
   }
 
   get pagesP() {
-    return Array.from({length: this.totalPagesP}, (_, i) => i + 1);
+    return Array.from({ length: this.totalPagesP }, (_, i) => i + 1);
   }
 
 
@@ -173,6 +194,6 @@ export class Independientes {
     'Si la persona es independiente por OPS y requiere afiliación a la ARL, debe anexar el contrato por prestación de servicios.'
   ];
 
- 
+
 
 }

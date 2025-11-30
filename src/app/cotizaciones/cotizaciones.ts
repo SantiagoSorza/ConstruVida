@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header';
 import { FooterComponent } from '../footer/footer';
@@ -9,34 +9,39 @@ import { FooterComponent } from '../footer/footer';
   imports: [CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './cotizaciones.html',
 })
-export class Cotizaciones {
-    whatsappNumber = '573189412003';
-  
-    whatsappMessage = 'Hola, me gustaría solicitar una cotización.';
-    whatsappMessagePlan = 'Hola, me gustaría ver los planes que tienen disponibles.';
+export class Cotizaciones implements OnInit {
+  ngOnInit() {
+    // Scroll to top when component loads
+    window.scrollTo(0, 0);
+  }
 
-    
-    get whatsappLink() {
-      const encodedMessage = encodeURIComponent(this.whatsappMessage);
-      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
-    }
-    get whatsappLinkPlan() {
-      const encodedMessage = encodeURIComponent(this.whatsappMessagePlan);
-      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
-    }
+  whatsappNumber = '573189412003';
 
-    openWhatsApp() {
-      window.open(this.whatsappLink, '_blank');
-    }
+  whatsappMessage = 'Hola, me gustaría solicitar una cotización.';
+  whatsappMessagePlan = 'Hola, me gustaría ver los planes que tienen disponibles.';
 
-    getPlanWhatsAppLink(plan: { title: string; items?: string[] }) {
-      const firstItem = plan.items && plan.items.length ? plan.items[0] : '';
-      const message = firstItem
-        ? `Hola, quiero información y cotización para el plan: ${plan.title}  ${firstItem}`
-        : `Hola, quiero información y cotización para el plan: ${plan.title}`;
-      const encodedMessage = encodeURIComponent(message);
-      return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
-    }
+
+  get whatsappLink() {
+    const encodedMessage = encodeURIComponent(this.whatsappMessage);
+    return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+  }
+  get whatsappLinkPlan() {
+    const encodedMessage = encodeURIComponent(this.whatsappMessagePlan);
+    return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+  }
+
+  openWhatsApp() {
+    window.open(this.whatsappLink, '_blank');
+  }
+
+  getPlanWhatsAppLink(plan: { title: string; items?: string[] }) {
+    const firstItem = plan.items && plan.items.length ? plan.items[0] : '';
+    const message = firstItem
+      ? `Hola, quiero información y cotización para el plan: ${plan.title}  ${firstItem}`
+      : `Hola, quiero información y cotización para el plan: ${plan.title}`;
+    const encodedMessage = encodeURIComponent(message);
+    return `https://wa.me/${this.whatsappNumber}?text=${encodedMessage}`;
+  }
 
   plans = [
     {
