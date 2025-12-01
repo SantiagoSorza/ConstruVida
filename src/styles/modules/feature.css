@@ -69,3 +69,39 @@
 }
 
 
+
+
+
+/* RESPONSIVE FEATURE CARDS */
+
+
+@media (max-width: 768px) {
+    .features__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .features__images {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .feature-card {
+        max-width: 100%;
+    }
+
+    .feature-card__img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-card__img {
+        height: 200px;
+    }
+
+    .feature-card__cta {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

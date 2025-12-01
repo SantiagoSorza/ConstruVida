@@ -28,7 +28,7 @@
     <p class="section-subtitle">Consulta nuestros planes</p>
 
     <div class="grid grid--auto">
-      <article class="plan-card" *ngFor="let plan of plans">
+      <article class="plan-card" *ngFor="let plan of pagedPlans()">
         <h3 class="plan-card__title">{{plan.title}}</h3>
         <ul class="plan-card__list">
           <li class="plan-card__list-item" *ngFor="let item of plan.items">{{item}}</li>
@@ -37,6 +37,15 @@
           <img class="external-icon-btn" src="assets/img/blanco.png" alt="Enlace externo">
         </a>
       </article>
+    </div>
+
+    <!-- Pagination controls  -->
+    <div class="plan-pagination" *ngIf="totalPages > 1">
+      <button class="page-btn" (click)="prevPage()" [disabled]="currentPage===0" aria-label="Página anterior">‹</button>
+      <div class="page-dots">
+        <button *ngFor="let _ of pages; let i = index" class="page-dot" (click)="goToPage(i)" [class.active]="i===currentPage" [attr.aria-label]="'Ir a página ' + (i+1)">{{i+1}}</button>
+      </div>
+      <button class="page-btn" (click)="nextPage()" [disabled]="currentPage===totalPages-1" aria-label="Página siguiente">›</button>
     </div>
   </section>
 

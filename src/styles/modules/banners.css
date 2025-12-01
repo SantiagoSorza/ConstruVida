@@ -83,3 +83,35 @@
 }
 
 
+
+/* RESPONSIVE  BANNERS */
+
+
+@media (max-width: 768px) {
+    .curved-section {
+        height: 350px;
+        text-align: center
+    }
+
+    .curved__imgInde {
+        object-position: center;
+    }
+
+    .curved__cta {
+        padding: 12px 24px;
+        font-size: 14px;
+        transform: translate(-50%, -250%);
+    }
+}
+
+@media (max-width: 480px) {
+    .curved-section {
+        height: 300px;
+    }
+
+    .curved__cta {
+        padding: 10px 20px;
+        font-size: 13px;
+        transform: translate(-50%, -350%);
+    }
+}

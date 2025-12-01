@@ -227,27 +227,11 @@
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-4);
+  align-items: start; 
 }
 
-.cards-services__card {
-  background: var(--color-muted-bg);
-  padding: var(--space-5);
-  border-radius: var(--radius-lg);
-  text-align: center;
-  min-height: 240px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: var(--transition-normal);
-  box-shadow: var(--shadow-sm);
-}
-
-.cards-services__card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
 
 .cards-services__icon {
   font-size: 2.2rem;
@@ -264,12 +248,28 @@
   object-fit: contain;
 }
 
+
+
+.cards-services__card {
+  background: var(--color-muted-bg);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
 .cards-services__card-title {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary-700);
   margin-bottom: var(--space-2);
 }
+
 
 .cards-services__card-text {
   color: var(--text-dark);
@@ -278,7 +278,7 @@
 }
 
 .cards-services__cta {
-  padding: 10px 25px;
+  padding: 20px 25px;
 }
 
 
@@ -404,6 +404,114 @@
   transition: var(--transition-normal);
 }
 
+
+/* RESPONSIVE CARDS */
+
+
+@media (max-width: 768px) {
+  .cards-services__card {
+  background: var(--color-muted-bg);
+  padding: var(--space-1);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.cards-services__card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-700);
+  margin-bottom: var(--space-2);
+}
+
+
+.cards-services__card-text {
+  color: var(--text-dark);
+  line-height: 1.5;
+  font-size: var(--font-size-base);
+}
+
+.cards-services__cta {
+  padding: 20px 25px;
+}
+    .card__image {
+        height: 100%;
+    }
+
+    .cards-services__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .cards-services__title {
+        font-size: var(--font-size-xl);
+    }
+
+    .cards-services__icon img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .insurance__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insurance-card {
+        padding: var(--space-4);
+    }
+
+    .plan-card {
+        padding: var(--space-2);
+        min-height: auto;
+    }
+
+    .card__whatsapp__container {
+        padding: var(--space-4) var(--space-3);
+        flex-direction: column;
+    }
+
+    .card__whatsapp__card {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    .card__email__card {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card__image {
+      height: 100%;
+    }
+
+    .cards-services__card {
+        padding: 30px 3px; 
+    }
+
+    .cards-services__icon img  {
+        max-width: 70px ;
+        max-height: 70px ;
+    }
+
+    .plan-card {
+        padding: var(--space-3);
+    }
+
+    .card__whatsapp__card {
+        padding: var(--space-4);
+    }
+
+    .card__whatsapp__image-container {
+        width: 100px;
+        height: 70px;
+    }
+}
 
 
 
