@@ -1,52 +1,49 @@
-
 /* Cards */
 .card.is-active {
-	box-shadow: 0 0 0 3px var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary);
 }
 
 /* Pagination */
 .pagination__btn.is-active {
-	background: var(--color-primary);
-	color: rgb(255, 255, 255);
-	box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  background: var(--color-primary);
+  color: rgb(255, 255, 255);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
 }
 
 /* Header */
 .header__menu-item a.is-active {
-	background: var(--color-primary);
-	color: white;
+  background: var(--color-primary);
+  color: white;
 }
 
 .header__hamburger.is-active .header__hamburger-bar:nth-child(1) {
-	transform: rotate(45deg) translate(10px, 10px);
+  transform: rotate(45deg) translate(10px, 10px);
 }
 
 .header__hamburger.is-active .header__hamburger-bar:nth-child(2) {
-	opacity: 0;
+  opacity: 0;
 }
 
 .header__hamburger.is-active .header__hamburger-bar:nth-child(3) {
-	transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(7px, -7px);
 }
-
 
 .btn:disabled,
 .pagination__btn:disabled {
-	opacity: 0.6;
-	cursor: not-allowed;
-	filter: grayscale(40%);
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(40%);
 }
 
 .btn:focus-visible {
-	outline: 3px solid rgba(39, 174, 96, 0.18);
-	outline-offset: 2px;
+  outline: 3px solid rgba(39, 174, 96, 0.18);
+  outline-offset: 2px;
 }
 
 .btn--yellow:hover {
   opacity: 0.9;
   transform: translateY(-2px);
 }
-
 
 .hero__cta:hover {
   transform: translateY(-2px);

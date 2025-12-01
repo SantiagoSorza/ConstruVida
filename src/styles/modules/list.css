@@ -11,7 +11,7 @@
   gap: 14px;
   padding: 14px 0;
   border-bottom: 1px solid var(--color-border-muted);
-  text-align: left; 
+  text-align: left;
 }
 
 .req-circle {
@@ -24,22 +24,19 @@
 
 .req-text {
   flex: 1;
-  line-height: 1.5; 
-  font-size: 1.07rem; 
+  line-height: 1.5;
+  font-size: 1.07rem;
 }
-
-
 
 /* RESPONSIVE LISTS */
 
-
 @media (max-width: 768px) {
-    .requirements-list {
-        padding-left: var(--space-3);
-    }
+  .requirements-list {
+    padding-left: var(--space-3);
+  }
 
-    .requirements-list li {
-        font-size: 14px;
-        padding: var(--space-2) 0;
-    }
+  .requirements-list li {
+    font-size: 14px;
+    padding: var(--space-2) 0;
+  }
 }

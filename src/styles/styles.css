@@ -25,5 +25,3 @@
 
 @import url('./state/states.css');
 
-/* Responsive styles - must be last to override other styles */
-@import url('./layout/responsive.css');

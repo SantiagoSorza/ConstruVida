@@ -43,7 +43,6 @@
   line-height: var(--line-height-relaxed);
 }
 
-
 /* Empresa */
 .section_about {
   padding: var(--space-6) var(--space-4);
@@ -74,9 +73,7 @@
   margin-bottom: var(--space-3);
 }
 
-
 /* Nosotros */
-
 
 .section_noso {
   max-width: 1200px;
@@ -119,7 +116,7 @@
 .section_noso__text-box {
   width: 100%;
   max-width: 640px;
-  text-align: left; 
+  text-align: left;
   padding: var(--space-2) var(--space-0);
 }
 
@@ -130,7 +127,7 @@
 .section_noso__paragraph {
   text-align: justify;
   text-justify: inter-word;
-  line-height: 1.95; 
+  line-height: 1.95;
   margin-bottom: var(--space-3);
   color: var(--text-dark);
 }
@@ -142,7 +139,6 @@
 }
 
 .section_noso__image {
-  
   padding: 0;
   border-radius: var(--radius-lg);
   background: transparent;
@@ -170,86 +166,82 @@
   margin-bottom: var(--space-2);
 }
 
-
-
-
 /* RESPONSIVE SECTIONS  */
 
-
 @media (max-width: 768px) {
-    .section_about {
-        padding: var(--space-5) var(--space-3);
-        grid-template-columns: 1fr;
-    }
+  .section_about {
+    padding: var(--space-5) var(--space-3);
+    grid-template-columns: 1fr;
+  }
 
-    .section_about__text h2 {
-        font-size: var(--font-size-xl);
-        text-align: center;
-    }
+  .section_about__text h2 {
+    font-size: var(--font-size-xl);
+    text-align: center;
+  }
 
-    .section_about__text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+  .section_about__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .section_about__text .btn {
-      align-self: center;
-      margin-top: var(--space-3);
-      width: min(420px, 90%);
-    }
+  .section_about__text .btn {
+    align-self: center;
+    margin-top: var(--space-3);
+    width: min(420px, 90%);
+  }
 
-    .section_about__text p {
-        font-size: 14px;
-    }
+  .section_about__text p {
+    font-size: 14px;
+  }
 
-    .section_noso {
-      padding: var(--space-4) var(--space-3);
-      align-items: stretch;
-        gap: var(--space-4);
-    }
+  .section_noso {
+    padding: var(--space-4) var(--space-3);
+    align-items: stretch;
+    gap: var(--space-4);
+  }
 
-    .section_noso__title {
-        font-size: var(--font-size-2xl);
-    }
+  .section_noso__title {
+    font-size: var(--font-size-2xl);
+  }
 
-    .section_noso__paragraph {
-        font-size: var(--font-size-base);
-    }
+  .section_noso__paragraph {
+    font-size: var(--font-size-base);
+  }
 
-    .section_noso__text-box {
-        padding: 0;
-    }
+  .section_noso__text-box {
+    padding: 0;
+  }
 }
 
 @media (max-width: 480px) {
-    .section_about__text h2 {
-        font-size: var(--font-size-lg);
-    }
+  .section_about__text h2 {
+    font-size: var(--font-size-lg);
+  }
 
-    .section_about__text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+  .section_about__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .section_about__text .btn {
-      width: 100%;
-      max-width: 320px;
-      align-self: center;
-      margin-top: var(--space-3);
-    }
+  .section_about__text .btn {
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+    margin-top: var(--space-3);
+  }
 
-    .section_noso__title {
-        font-size: var(--font-size-xl);
-    }
+  .section_noso__title {
+    font-size: var(--font-size-xl);
+  }
 
-    .section_noso__paragraph {
-        font-size: 14px;
-    }
- .section_noso {
+  .section_noso__paragraph {
+    font-size: 14px;
+  }
+  .section_noso {
     grid-template-columns: 1fr;
     gap: var(--space-5);
     padding: var(--space-4) var(--space-3);
@@ -297,3 +289,25 @@
   }
 }
 
+@media (max-width: 480px) {
+  .section_noso {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .section_noso__content {
+    order: 0;
+  }
+  .section_noso__image {
+    order: 1;
+  }
+
+  .section_noso__image {
+    margin-top: 0;
+  }
+  .section_noso__text-box {
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
+  }
+}

@@ -9,7 +9,6 @@
   overflow: hidden;
 }
 
-
 .curved__img {
   width: 100%;
   height: 500px;
@@ -17,7 +16,6 @@
   display: block;
   object-position: 0% 60%;
 }
-
 
 .curved__imgInde {
   width: 100%;
@@ -53,15 +51,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 4; 
+  z-index: 4;
   padding: 16px 48px;
   font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
   border-radius: calc(var(--radius-lg) + 4px);
-  box-shadow: 0 14px 36px rgba(0,0,0,0.14);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14);
   background: var(--color-primary);
   color: var(--text-light);
-  border: 2px solid rgba(0,0,0,0.06);
+  border: 2px solid rgba(0, 0, 0, 0.06);
   pointer-events: auto;
   display: flex;
   align-items: center;
@@ -82,64 +80,64 @@
   pointer-events: none;
 }
 
-
-
 /* RESPONSIVE  BANNERS */
 
-
 @media (max-width: 768px) {
-    .curved-section {
-        height: 350px;
-        text-align: center
-    }
+  .curved-section {
+    height: 350px;
+    text-align: center;
+  }
 
-    .curved__imgInde {
-        object-position: center;
-    }
+  .curved__imgInde {
+    object-position: center;
+  }
 
-    .curved__cta {
-        padding: 12px 24px;
-        font-size: 14px;
-        transform: translate(-50%, -200%);
-    }
-     .curved__overlay { background: rgba(0,0,0,0.55); }
-     .curved__img,
+  .curved__cta {
+    padding: 12px 24px;
+    font-size: 14px;
+    transform: translate(-50%, -200%);
+  }
+  .curved__overlay {
+    background: rgba(0, 0, 0, 0.55);
+  }
+  .curved__img,
   .curved__imgInde,
   .curved__imgEmp,
-  .curved__imgNos { 
-    height: 500px; 
+  .curved__imgNos {
+    height: 500px;
   }
-  .curved__text { 
-    font-size: clamp(.95rem, 6.5vw, 1.6rem); 
-    padding: 0 16px; 
+  .curved__text {
+    font-size: clamp(0.95rem, 6.5vw, 1.6rem);
+    padding: 0 16px;
     transform: translate(-0%, -15%);
   }
 }
 
 @media (max-width: 480px) {
-    .curved-section {
-        height: 300px;
-    }
+  .curved-section {
+    height: 300px;
+  }
 
-    .curved__cta {
-        padding: 10px 20px;
-        font-size: 13px;
-        transform: translate(-50%, -300%);
-    }
-    
+  .curved__cta {
+    padding: 10px 20px;
+    font-size: 13px;
+    transform: translate(-50%, -300%);
+  }
+
   .curved__img,
   .curved__imgInde,
   .curved__imgEmp,
-  .curved__imgNos { 
-    height: 500px; 
+  .curved__imgNos {
+    height: 500px;
   }
 
-  .curved__overlay { background: rgba(0,0,0,0.55); }
+  .curved__overlay {
+    background: rgba(0, 0, 0, 0.55);
+  }
 
-  .curved__text { 
-    font-size: clamp(.95rem, 6.5vw, 1.6rem); 
-    padding: 0 16px; 
+  .curved__text {
+    font-size: clamp(0.95rem, 6.5vw, 1.6rem);
+    padding: 0 16px;
     transform: translate(-0%, -20%);
   }
-
 }
