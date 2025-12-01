@@ -100,8 +100,15 @@
     .curved__cta {
         padding: 12px 24px;
         font-size: 14px;
-        transform: translate(-50%, -250%);
+        transform: translate(-50%, -100%);
     }
+     .curved__overlay { background: rgba(0,0,0,0.55); }
+     .curved__img,
+  .curved__imgInde,
+  .curved__imgEmp,
+  .curved__imgNos { 
+    height: 500px; 
+  }
 }
 
 @media (max-width: 480px) {
@@ -112,78 +119,18 @@
     .curved__cta {
         padding: 10px 20px;
         font-size: 13px;
-        transform: translate(-50%, -350%);
+        transform: translate(-50%, -50%);
     }
-}
-
-/* Additional responsive-only overrides - do not change base rules above */
-@media (max-width: 1024px) {
+    
   .curved__img,
   .curved__imgInde,
   .curved__imgEmp,
-  .curved__imgNos {
-    object-position: center;
-    /* slightly smaller banner on medium screens */
-    height: 420px;
+  .curved__imgNos { 
+    height: 280px; 
   }
-
-  .curved__overlay { background: rgba(0,0,0,0.38); }
-
-  .curved__text {
-    font-size: clamp(1.2rem, 3.6vw, 2.6rem);
-    padding: 0 28px;
-    line-height: 1.14;
-  }
-
-  .curved__cta {
-    /* nudge CTA a little higher but still centered */
-    transform: translate(-50%, -140%);
-    padding: 12px 28px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .curved__img,
-  .curved__imgInde,
-  .curved__imgEmp,
-  .curved__imgNos {
-    object-position: center;
-    height: 340px; /* reduce height on tablets / large phones */
-  }
-
-  .curved__overlay { background: rgba(0,0,0,0.45); }
-
-  /* move CTA out of the center of the image and place it below content */
-  .curved__cta {
-    position: relative !important;
-    transform: none !important;
-    top: auto; left: auto;
-    display: inline-flex;
-    margin: 14px auto 0;
-    padding: 10px 22px;
-    font-size: .95rem;
-  }
-
-  .curved__text { font-size: clamp(1rem, 4.5vw, 2rem); max-width: 920px; }
-}
-
-@media (max-width: 480px) {
-  .curved__img,
-  .curved__imgInde,
-  .curved__imgEmp,
-  .curved__imgNos { height: 280px; object-position: center; }
 
   .curved__overlay { background: rgba(0,0,0,0.55); }
 
   .curved__text { font-size: clamp(.95rem, 6.5vw, 1.6rem); padding: 0 16px; }
 
-  .curved__cta {
-    padding: 9px 16px !important;
-    font-size: .9rem !important;
-    position: relative !important;
-    transform: none !important;
-    margin: 12px auto 0 !important;
-    left: auto; top: auto;
-  }
 }
